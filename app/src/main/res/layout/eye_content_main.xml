@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,7 +9,7 @@
     tools:context=".MenuActivity"
     tools:showIn="@layout/eye_menu_activity">
 
-    <LinearLayout
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
@@ -113,40 +112,5 @@
             </LinearLayout>
         </GridLayout>
 
-        <!--<GridLayout-->
-            <!--android:layout_width="377dp"-->
-            <!--android:layout_height="268dp"-->
-            <!--android:layout_gravity="center_horizontal"-->
-            <!--android:columnCount="1">-->
-
-            <!--<Button-->
-                <!--android:id="@+id/addDetailEye"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="เพิ่มข้อมูลสุขภาพ"-->
-                <!--android:textSize="18dp" />-->
-
-            <!--<Button-->
-                <!--android:id="@+id/userData"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="ข้อมูลผู้ใช้งาน"-->
-                <!--android:textSize="18dp" />-->
-
-            <!--<Button-->
-                <!--android:id="@+id/button4"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="Button" />-->
-
-            <!--<Button-->
-                <!--android:id="@+id/button2"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="Button" />-->
-
-        <!--</GridLayout>-->
-
-
-    </LinearLayout>
+    </GridLayout>
 </ScrollView>
