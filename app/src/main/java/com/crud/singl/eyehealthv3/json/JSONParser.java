@@ -15,7 +15,10 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-
+/**
+ * @Copyright by Mr.Praneed Klanboon
+ * Email: Praneed.kla@northbkk.ac.th
+ * */
 public class JSONParser extends AsyncTask<Void,Void,Boolean>{
 
     Context k;
@@ -36,8 +39,8 @@ public class JSONParser extends AsyncTask<Void,Void,Boolean>{
         super.onPreExecute();
 
         pd=new ProgressDialog(k);
-        pd.setTitle("Parse");
-        pd.setMessage("Parsing...Please wait");
+        pd.setTitle("ประมวณผล");
+        pd.setMessage("กำลังประมาณผล...กรุณารอสักครู่");
         pd.show();
     }
 
@@ -57,7 +60,7 @@ public class JSONParser extends AsyncTask<Void,Void,Boolean>{
             gv.setAdapter(new KnowledgeOneAdapter(k,knowledges));
         }else
         {
-            Toast.makeText(k, "Unable To Parse,Check Your Log output", Toast.LENGTH_SHORT).show();
+            Toast.makeText(k, "ไม่สามารถประมาณผลได้,โปรดตรวจสอบข้อผิดพลาดที่ Log", Toast.LENGTH_SHORT).show();
         }
 
     }

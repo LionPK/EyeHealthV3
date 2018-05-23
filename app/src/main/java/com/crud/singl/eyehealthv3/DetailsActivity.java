@@ -12,6 +12,10 @@ import android.widget.TextView;
 import com.crud.singl.eyehealthv3.util.DateTimeUtils;
 import com.crud.singl.eyehealthv3.util.Utils;
 
+/**
+ * @Copyright by Mr.Praneed Klanboon
+ * Email: Praneed.kla@northbkk.ac.th
+ * */
 public class DetailsActivity extends Activity {
 
     private PackageInfo packageInfo;

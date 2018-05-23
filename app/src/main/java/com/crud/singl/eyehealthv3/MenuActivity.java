@@ -7,6 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+/**
+ * @Copyright by Mr.Praneed Klanboon
+ * Email: Praneed.kla@northbkk.ac.th
+ * */
 public class MenuActivity extends AppCompatActivity {
 
     @Override

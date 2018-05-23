@@ -16,6 +16,11 @@ import com.crud.singl.eyehealthv3.introHealth.DetailActivity;
 
 import java.util.ArrayList;
 
+
+/**
+ * @Copyright by Mr.Praneed Klanboon
+ * Email: Praneed.kla@northbkk.ac.th
+ * */
 public class KnowledgeOneAdapter extends BaseAdapter {
 
     Context k;
@@ -49,7 +54,6 @@ public class KnowledgeOneAdapter extends BaseAdapter {
         }
 
         TextView nameTxt= (TextView) view.findViewById(R.id.nameTxt);
-//        TextView detailTxt= (TextView) view.findViewById(R.id.detailTxt);
         ImageView imageKnow = (ImageView) view.findViewById(R.id.imageKnow);
 
         Knowledge knowledge= (Knowledge) this.getItem(i);
@@ -60,13 +64,12 @@ public class KnowledgeOneAdapter extends BaseAdapter {
         Glide.with(k).load(image).into(imageKnow);
 
         nameTxt.setText(name);
-//        detailTxt.setText(detail);
 
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //OPEN DETAIL ACTIVITY
+                // Open detail activity and display name, detail and image on card view
 
                 openDetailActivity(name,detail,image);
             }

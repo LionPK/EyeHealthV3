@@ -21,6 +21,10 @@ import com.crud.singl.eyehealthv3.service.UsageService;
 import com.crud.singl.eyehealthv3.util.Utils;
 import com.crud.singl.eyehealthv3.view.SlidingTabLayout;
 
+/**
+ * @Copyright by Mr.Praneed Klanboon
+ * Email: Praneed.kla@northbkk.ac.th
+ * */
 public class MainActivity extends AppCompatActivity implements InstalledDialogFragment.ChooserFragmentInterface {
 
     private static final int OFFSCREEN_PAGE_LIMIT = 4;

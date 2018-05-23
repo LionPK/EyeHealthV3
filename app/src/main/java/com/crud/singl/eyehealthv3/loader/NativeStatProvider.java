@@ -23,6 +23,10 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ * @Copyright by Mr.Praneed Klanboon
+ * Email: Praneed.kla@northbkk.ac.th
+ * */
 @TargetApi(Build.VERSION_CODES.LOLLIPOP)
 public class NativeStatProvider implements StatProvider {
 

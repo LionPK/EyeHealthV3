@@ -22,6 +22,10 @@ import java.util.Calendar;
 import java.util.Timer;
 import java.util.TimerTask;
 
+/**
+ * @Copyright by Mr.Praneed Klanboon
+ * Email: Praneed.kla@northbkk.ac.th
+ * */
 public class UsageService extends Service {
 
     private static final int NOTIFICATION_ID = 1;

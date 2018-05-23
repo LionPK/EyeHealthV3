@@ -9,6 +9,10 @@ import android.widget.GridView;
 
 import com.crud.singl.eyehealthv3.json.JSONDownloaderOne;
 
+/**
+ * @Copyright by Mr.Praneed Klanboon
+ * Email: Praneed.kla@northbkk.ac.th
+ * */
 public class GuestUserActivity extends AppCompatActivity {
     String jsonURL="http://eyehealthimpact.com/android_knowlage_newapi/knowledge_one.php";
     GridView gv;

@@ -5,6 +5,10 @@ import com.crud.singl.eyehealthv3.model.StatEntry;
 
 import java.util.List;
 
+/**
+ * @Copyright by Mr.Praneed Klanboon
+ * Email: Praneed.kla@northbkk.ac.th
+ * */
 public interface StatProvider {
 
     List<StatEntry> loadStats(Period period);

@@ -17,6 +17,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
+/**
+ * @Copyright by Mr.Praneed Klanboon
+ * Email: Praneed.kla@northbkk.ac.th
+ * */
 public class MyFragmentPagerAdapter extends FragmentPagerAdapter
     implements ViewPager.OnPageChangeListener {
 

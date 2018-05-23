@@ -13,6 +13,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 
+/**
+ * @Copyright by Mr.Praneed Klanboon
+ * Email: Praneed.kla@northbkk.ac.th
+ * */
 
 public class JSONDownloaderOne extends AsyncTask<Void,Void,String> {
 
@@ -33,8 +37,8 @@ public class JSONDownloaderOne extends AsyncTask<Void,Void,String> {
         super.onPreExecute();
 
         pd=new ProgressDialog(k);
-        pd.setTitle("Download JSON");
-        pd.setMessage("Downloading...Please wait");
+        pd.setTitle("โหลดเนื้อหา");
+        pd.setMessage("กำลังโหลด...กรุณารอสักครู่");
         pd.show();
 
     }

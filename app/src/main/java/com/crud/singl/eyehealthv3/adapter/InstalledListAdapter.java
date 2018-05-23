@@ -15,6 +15,10 @@ import java.util.Locale;
 import com.crud.singl.eyehealthv3.R;
 import com.crud.singl.eyehealthv3.model.StatEntry;
 
+/**
+ * @Copyright by Mr.Praneed Klanboon
+ * Email: Praneed.kla@northbkk.ac.th
+ * */
 public class InstalledListAdapter extends BaseAdapter {
 
     private Context context;

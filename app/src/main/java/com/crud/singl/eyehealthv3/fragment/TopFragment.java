@@ -26,6 +26,10 @@ import com.crud.singl.eyehealthv3.model.StatEntry;
 
 import java.util.List;
 
+/**
+ * @Copyright by Mr.Praneed Klanboon
+ * Email: Praneed.kla@northbkk.ac.th
+ * */
 public class TopFragment extends Fragment {
 
     private static final String START_URL = "https://play.google.com/store/apps/details?id=";

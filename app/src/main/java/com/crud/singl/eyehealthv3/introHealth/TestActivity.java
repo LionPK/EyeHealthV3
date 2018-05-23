@@ -6,6 +6,11 @@ import android.widget.TextView;
 
 import com.crud.singl.eyehealthv3.R;
 
+
+/**
+ * @Copyright by Mr.Praneed Klanboon
+ * Email: Praneed.kla@northbkk.ac.th
+ * */
 public class TestActivity extends AppCompatActivity {
 
     @Override

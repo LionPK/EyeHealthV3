@@ -10,8 +10,9 @@ import com.crud.singl.eyehealthv3.R;
 
 
 /**
- * Created by singl on 3/19/2018.
- */
+ * @Copyright by Mr.Praneed Klanboon
+ * Email: Praneed.kla@northbkk.ac.th
+ * */
 
 public class CustomShareActionProvider extends ShareActionProvider {
     private final Context context;

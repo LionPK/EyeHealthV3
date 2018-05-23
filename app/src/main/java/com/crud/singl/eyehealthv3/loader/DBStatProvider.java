@@ -19,6 +19,10 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+/**
+ * @Copyright by Mr.Praneed Klanboon
+ * Email: Praneed.kla@northbkk.ac.th
+ * */
 public class DBStatProvider implements StatProvider {
 
     private static final int MAX_COUNT_LIMIT = 500;

@@ -10,6 +10,10 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+/**
+ * @Copyright by Mr.Praneed Klanboon
+ * Email: Praneed.kla@northbkk.ac.th
+ * */
 public class DateTimeUtils {
 
     private static final String DATE_FORMAT_PATTERN = "yyyy-MM-dd";

@@ -7,6 +7,10 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 
+/**
+ * @Copyright by Mr.Praneed Klanboon
+ * Email: Praneed.kla@northbkk.ac.th
+ * */
 public class InstalledDialogFragment extends DialogFragment implements DialogInterface.OnClickListener {
 
     private ChooserFragmentInterface mInterface;

@@ -3,8 +3,9 @@ package com.crud.singl.eyehealthv3.entities;
 import java.io.Serializable;
 
 /**
- * Created by singl on 3/20/2018.
- */
+ * @Copyright by Mr.Praneed Klanboon
+ * Email: Praneed.kla@northbkk.ac.th
+ * */
 
 public class Account_en implements Serializable{
 

@@ -9,8 +9,9 @@ import android.util.Log;
 import java.util.HashMap;
 
 /**
- * Created by singl on 3/27/2018.
- */
+ * @Copyright by Mr.Praneed Klanboon
+ * Email: Praneed.kla@northbkk.ac.th
+ * */
 
 public class SQLiteHandler extends SQLiteOpenHelper {
     private static final String TAG = SQLiteHandler.class.getSimpleName();

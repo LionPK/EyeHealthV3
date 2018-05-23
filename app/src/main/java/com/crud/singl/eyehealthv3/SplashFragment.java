@@ -10,6 +10,10 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 
+/**
+ * @Copyright by Mr.Praneed Klanboon
+ * Email: Praneed.kla@northbkk.ac.th
+ * */
 public class SplashFragment extends Activity implements Animation.AnimationListener{
     Animation animatorFadeIn;
     LinearLayout linearLayout;

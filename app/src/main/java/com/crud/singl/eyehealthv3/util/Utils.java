@@ -1,5 +1,9 @@
 package com.crud.singl.eyehealthv3.util;
 
+/**
+ * @Copyright by Mr.Praneed Klanboon
+ * Email: Praneed.kla@northbkk.ac.th
+ * */
 public class Utils {
     public static final String LOG_TAG = "my_apps_time";
 

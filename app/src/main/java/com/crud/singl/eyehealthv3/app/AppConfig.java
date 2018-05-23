@@ -1,8 +1,9 @@
 package com.crud.singl.eyehealthv3.app;
 
 /**
- * Created by singl on 3/27/2018.
- */
+ * @Copyright by Mr.Praneed Klanboon
+ * Email: Praneed.kla@northbkk.ac.th
+ * */
 
 public class AppConfig {
     // Server user login url

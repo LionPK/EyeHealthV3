@@ -38,6 +38,10 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
+/**
+ * @Copyright by Mr.Praneed Klanboon
+ * Email: Praneed.kla@northbkk.ac.th
+ * */
 public class InstalledFragment extends Fragment {
 
     private Context context;

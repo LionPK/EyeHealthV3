@@ -1,5 +1,9 @@
 package com.crud.singl.eyehealthv3.service;
 
+/**
+ * @Copyright by Mr.Praneed Klanboon
+ * Email: Praneed.kla@northbkk.ac.th
+ * */
 public class AppInfo {
 
     private String packageName;

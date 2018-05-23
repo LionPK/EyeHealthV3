@@ -5,8 +5,9 @@ import android.content.SharedPreferences.Editor;
 import android.util.Log;
 
 /**
- * Created by singl on 3/27/2018.
- */
+ * @Copyright by Mr.Praneed Klanboon
+ * Email: Praneed.kla@northbkk.ac.th
+ * */
 
 public class SessionManager {
     // LogCat tag
@@ -39,7 +40,7 @@ public class SessionManager {
         // commit changes
         editor.commit();
 
-        Log.d(TAG, "User login session modified!");
+        Log.d(TAG, "เซสชันการเข้าสู่ระบบของผู้ใช้ถูกแก้ไขแล้ว");
     }
 
     public boolean isLoggedIn(){
