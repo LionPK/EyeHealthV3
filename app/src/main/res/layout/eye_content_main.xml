@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:gravity="center"
+    tools:context=".MenuActivity"
+    tools:showIn="@layout/eye_menu_activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="EYE HEALTH MENU"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="30sp" />
+
+        <GridLayout
+            android:layout_width="377dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:columnCount="1">
+
+            <LinearLayout
+                android:id="@+id/button_screen"
+                style="@style/HomeItemLayoutStyle1"
+                android:background="@drawable/shape_home_item_1">
+
+                <ImageView
+                    style="@style/HomeItemImageStyle"
+                    android:src="@drawable/screen_time_pic" />
+
+                <TextView
+                    style="@style/HomeItemLabelStyle"
+                    android:textStyle="bold"
+                    android:text="@string/nav_screen" />
+            </LinearLayout>
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="377dp"
+            android:layout_height="147dp"
+            android:layout_gravity="center_horizontal"
+            android:columnCount="2">
+
+            <LinearLayout
+                android:id="@+id/button_new"
+                style="@style/HomeItemLayoutStyle"
+                android:background="@drawable/shape_home_item_3">
+
+                <ImageView
+                    style="@style/HomeItemImageStyle"
+                    android:src="@drawable/intro_pic" />
+
+                <TextView
+                    style="@style/HomeItemLabelStyle"
+                    android:textStyle="bold"
+                    android:text="@string/know_id" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/button_notification"
+                style="@style/HomeItemLayoutStyle"
+                android:background="@drawable/shape_home_item_4">
+
+                <ImageView
+                    style="@style/HomeItemImageStyle"
+                    android:layout_width="131dp"
+                    android:layout_height="82dp"
+                    android:src="@drawable/ic_message" />
+
+                <TextView
+                    style="@style/HomeItemLabelStyle"
+                    android:textStyle="bold"
+                    android:text="@string/nav_noti" />
+            </LinearLayout>
+
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="377dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:columnCount="1">
+
+            <LinearLayout
+                android:id="@+id/button_management"
+                style="@style/HomeItemLayoutStyle1"
+                android:background="@drawable/shape_home_item_2">
+
+                <ImageView
+                    style="@style/HomeItemImageStyle"
+                    android:layout_width="151dp"
+                    android:layout_height="107dp"
+                    android:src="@drawable/eye_pic" />
+
+                <TextView
+                    style="@style/HomeItemLabelStyle"
+                    android:textStyle="bold"
+                    android:text="@string/nav_eye" />
+            </LinearLayout>
+        </GridLayout>
+
+        <!--<GridLayout-->
+            <!--android:layout_width="377dp"-->
+            <!--android:layout_height="268dp"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:columnCount="1">-->
+
+            <!--<Button-->
+                <!--android:id="@+id/addDetailEye"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="เพิ่มข้อมูลสุขภาพ"-->
+                <!--android:textSize="18dp" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/userData"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="ข้อมูลผู้ใช้งาน"-->
+                <!--android:textSize="18dp" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/button4"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Button" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/button2"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Button" />-->
+
+        <!--</GridLayout>-->
+
+
+    </LinearLayout>
+</ScrollView>

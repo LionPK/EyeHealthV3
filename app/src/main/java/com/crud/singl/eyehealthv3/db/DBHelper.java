@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBHelper extends SQLiteOpenHelper {
 
-    private static final String DB_NAME = "myappstime.db";
+    private static final String DB_NAME = "eye_health";
 
     public static final String DB_TABLE_STATS = "table_stats";
     private static final int DB_VERSION = 1;

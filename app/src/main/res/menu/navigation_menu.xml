@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/screen_id"
+        android:icon="@drawable/ic_access"
+        android:title="@string/nav_screen"/>
+    <item
+        android:id="@+id/eye_id"
+        android:icon="@drawable/ic_eye"
+        android:title="@string/nav_eye"/>
+    <item
+        android:id="@+id/intro_id"
+        android:icon="@drawable/ic_reorder"
+        android:title="@string/nav_intro" />
+    <!--<item-->
+        <!--android:id="@+id/noti_id"-->
+        <!--android:icon="@drawable/ic_notifications_black_24dp"-->
+        <!--android:title="@string/nav_noti" />-->
+    <item
+        android:id="@+id/mor_id"
+        android:icon="@drawable/ic_more"
+        android:title="@string/nav_mor"/>
+</menu>

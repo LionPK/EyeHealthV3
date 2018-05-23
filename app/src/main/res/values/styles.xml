@@ -1,8 +1,136 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="listPopupWindowStyle">@style/Widget.AppCompat.ListPopupWindow</item>
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">-->
+        <!--<item name="listPopupWindowStyle">@style/Widget.AppCompat.ListPopupWindow</item>-->
+    <!--</style>-->
+
+    <!--<style name="TopIcon">-->
+        <!--<item name="android:layout_width">80dp</item>-->
+        <!--<item name="android:layout_height">80dp</item>-->
+    <!--</style>-->
+
+    <!--<style name="TopFont">-->
+        <!--<item name="android:layout_width">wrap_content</item>-->
+        <!--<item name="android:layout_height">wrap_content</item>-->
+        <!--<item name="android:layout_marginLeft">10dp</item>-->
+        <!--<item name="android:textSize">18sp</item>-->
+        <!--<item name="android:textStyle">bold</item>-->
+        <!--<item name="android:textColor">@color/list_text</item>-->
+    <!--</style>-->
+
+    <!--<style name="TopTimeFont">-->
+        <!--<item name="android:layout_width">wrap_content</item>-->
+        <!--<item name="android:layout_height">wrap_content</item>-->
+        <!--<item name="android:layout_marginLeft">10dp</item>-->
+        <!--<item name="android:textSize">16sp</item>-->
+        <!--<item name="android:textStyle">bold</item>-->
+        <!--<item name="android:textColor">@color/list_text</item>-->
+    <!--</style>-->
+
+    <!--<style name="ListRowIcon">-->
+        <!--<item name="android:layout_width">40dp</item>-->
+        <!--<item name="android:layout_height">40dp</item>-->
+    <!--</style>-->
+
+    <!--new set style-->
+    <!-- Base application theme. -->
+    <style name="Theme.eyeHealth" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="colorControlActivated">@color/colorControlActivated</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+    </style>
+
+    <!--Login design-->
+    <style name="TextAppearance.eyeHealth.Title" parent="TextAppearance.AppCompat.Headline">
+        <item name="textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="Widget.eyeHealth.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlineBox">
+        <item name="hintTextAppearance">@style/TextAppearance.eyeHealth.TextInputLayout.HintText</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="TextAppearance.eyeHealth.TextInputLayout.HintText" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="Widget.eyeHealth.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="backgroundTint">?attr/colorPrimaryDark</item>
+        <item name="android:stateListAnimator" tools:ignore="NewApi">
+            @animator/shr_next_button_state_list_anim
+        </item>
+    </style>
+
+    <style name="Widget.eyeHealth.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="Widget.eyeHealth.Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">?attr/colorAccent</item>
+        <item name="android:theme">@style/Theme.eyeHealth</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="titleTextAppearance">@style/TextAppearance.eyeHealth.Toolbar</item>
+    </style>
+
+    <style name="TextAppearance.eyeHealth.Toolbar" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Widget.eyeHealth.Backdrop" parent="">
+        <item name="android:background">?attr/colorAccent</item>
+    </style>
+
+    <!--Guest info-->
+    <style name="HomeItemImageStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <!-- Menu main styles -->
+    <style name="HomeItemLayoutStyle1">
+        <item name="android:layout_width">373dp</item>
+        <item name="android:layout_height">145dp</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">top|center</item>
+        <item name="android:padding">5dp</item>
+
+    </style>
+
+    <style name="HomeItemLabelStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="HomeItemLayoutStyle">
+        <item name="android:layout_width">184dp</item>
+        <item name="android:layout_height">140dp</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">top|center</item>
+        <item name="android:padding">2dp</item>
+
+    </style>
+
+    <style name="ListRowIcon">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
     </style>
 
     <style name="TopIcon">
@@ -16,7 +144,7 @@
         <item name="android:layout_marginLeft">10dp</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/list_text</item>
+        <item name="android:textColor">@color/gen_black</item>
     </style>
 
     <style name="TopTimeFont">
@@ -25,12 +153,20 @@
         <item name="android:layout_marginLeft">10dp</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/list_text</item>
+        <item name="android:textColor">@color/gen_black</item>
     </style>
 
-    <style name="ListRowIcon">
-        <item name="android:layout_width">40dp</item>
-        <item name="android:layout_height">40dp</item>
+    <!-- them ทั่วไปของ app -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- กำหนด them เองตรงนี้. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
 </resources>

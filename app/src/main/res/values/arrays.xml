@@ -2,12 +2,12 @@
 <resources>
 
     <string-array name="sort_by_string_array">
-        <item>name \u2191</item>
-        <item>name \u2193</item>
-        <item>install date \u2191</item>
-        <item>install date \u2193</item>
-        <item>last update \u2191</item>
-        <item>last update \u2193</item>
+        <item>ชื่อ \u2191</item>
+        <item>ชื่อ \u2193</item>
+        <item>วันที่ติดตั้ง \u2191</item>
+        <item>วันที่ติดตั้ง \u2193</item>
+        <item>วันที่ปรับปรุง \u2191</item>
+        <item>วันที่ปรับปรุง \u2193</item>
     </string-array>
 
 </resources>

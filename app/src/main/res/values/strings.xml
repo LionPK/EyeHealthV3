@@ -2,42 +2,130 @@
 
     <string name="app_name">My Apps Time</string>
 
-    <string name="tab_top">TOP</string>
-    <string name="tab_stats">STATS</string>
-    <string name="tab_installed">INSTALLED</string>
+    <!--<string name="tab_top">TOP</string>-->
+    <!--<string name="tab_stats">STATS</string>-->
+    <!--<string name="tab_installed">INSTALLED</string>-->
 
-    <string name="top_menu_share">Share</string>
-    <string name="top_head">TOP 3 APPS FOR WEEK</string>
-    <string name="top_time">Week time</string>
-    <string name="top_share_header">TOP 3 of my most used apps:\n</string>
+    <!--<string name="top_menu_share">Share</string>-->
+    <!--<string name="top_head">TOP 3 APPS FOR WEEK</string>-->
+    <!--<string name="top_time">Week time</string>-->
+    <!--<string name="top_share_header">TOP 3 of my most used apps:\n</string>-->
 
-    <string name="menu_select_period">Select period</string>
-    <string name="menu_search">Search</string>
+    <!--<string name="menu_select_period">Select period</string>-->
+    <!--<string name="menu_search">Search</string>-->
 
     <string name="stats_select_dates">Select start and end date</string>
-    <string name="stats_day">Today</string>
-    <string name="stats_yesterday">Yesterday</string>
-    <string name="stats_week">For week</string>
-    <string name="stats_year">For year</string>
+    <!--<string name="stats_day">Today</string>-->
+    <!--<string name="stats_yesterday">Yesterday</string>-->
+    <!--<string name="stats_week">For week</string>-->
+    <!--<string name="stats_year">For year</string>-->
 
-    <string name="enable_usage_permission">Enable permission for My Apps Time and press back</string>
+    <!--<string name="enable_usage_permission">Enable permission for My Apps Time and press back</string>-->
 
     <string name="from">from</string>
     <string name="to">to</string>
+
+    <!--<string name="hours">h</string>-->
+    <!--<string name="minutes">min</string>-->
+    <!--<string name="seconds">sec</string>-->
+
+    <!--<string name="installed_menu_search_hint">Type app name</string>-->
+    <!--<string name="installed_spinner_sort">Sort by</string>-->
+    <!--<string name="installed_include_system">Include system apps</string>-->
+    <!--<string name="installed_cannot_be_launched">Application can not be launched</string>-->
+
+    <!--<string name="choose_action">Choose action</string>-->
+    <!--<string name="launch">Launch</string>-->
+    <!--<string name="details">Details</string>-->
+    <!--<string name="system_menu">System menu</string>-->
+    <!--<string name="uninstall">Uninstall</string>-->
+
+    <!-- new set string -->
+    <string name="eye_app_name">Eye Health</string>
+
+    <!--text for sign in page-->
+    <string name="eye_hint_email">อีเมล์</string>
+    <string name="eye_hint_password">รหัสผ่าน</string>
+    <string name="eye_button_signIn">เข้าสู่ระบบ</string>
+    <string name="eye_button_register">ลงทะเบียน</string>
+    <string name="eye_button_guest">ข้ามขั้นตอนการลงทะเบียน</string>
+
+    <!-- Sign in error message -->
+    <string name="eye_error_password_more_length">รหัสผ่านต้องกรอกอย่างน้อย 8 ตัวอักษร</string>
+    <string name="eye_error_not_enter_email">กรุณากรอกอีเมล์</string>
+    <string name="eye_error_not_match_email">กรุณากรอกอีเมล์ให้ถูกต้องตามตัวอย่าง Exam@exam.com</string>
+    <string name="eye_error_not_enter_password">กรุณากรอกรหัสผ่าน</string>
+    <string name="eye_error_password_less">กรุณากรอกรหัสอย่างน้อย 8 ตัวอักษร และไม่เกิน 12 อักษร</string>
+
+
+    <!-- text for Sign up page -->
+    <string name="eye_sign_up_name">ลงทะเบียนผู้ใช้งาน</string>
+    <string name="eye_hint_name">ชื่อ</string>
+    <string name="eye_hint_surname">นามสกุล</string>
+    <string name="eye_hint_email_sign_up">อีเมล์ (Exam@exam.com)</string>
+    <string name="eye_hint_password_sign_up">รหัสผ่าน (A-Z,0-9)</string>
+    <string name="eye_hint_re_enter_password">ยินยันรหัสผ่าน</string>
+    <string name="eye_button_cancal">ยกเลิก</string>
+    <string name="eye_button_link_to_sign_in">กลับไปยังหน้าต่างเข้าสู่ระบบ</string>
+
+    <!-- Sign up error message -->
+    <string name="eye_error_not_enter_name">กรุณากรอกชื่อ</string>
+    <string name="eye_error_not_enter_surname">กรุณากรอกนามสกุล</string>
+    <string name="eye_error_not_enter_pass">กรุณากรอกรหัสผ่าน</string>
+    <string name="eye_error_not_enter_re_pass">กรุณากรอกรหัสยืนยัน</string>
+    <string name="eye_error_not_enter_re_pass_notmatch">รหัสการยืนยันไม่ตรงกันโปรดตรวจสอบอีกครั้ง</string>
+
+    <!--Guest menu-->
+    <string name="eye_guest_name">ตรวจสอบข้อมูลการดูแลสุขภาพตา</string>
+    <string name="eye_guest_title1">ความรู้เกี่ยวกับโรคตา</string>
+    <string name="eye_guest_title2">ความรู้เกี่ยวกับการรับประทานอาหาร</string>
+    <string name="eye_sign_knowledge_name">ข้อมูลเกล็ดความรู้</string>
+
+
+    <!--Time menu-->
+    <string name="top_menu_share">แชร์</string>
+
+
+    <!--All menu config-->
+    <string name="menu_search">ค้นหา</string>
+    <string name="action_settings">ตั้งค่า</string>
+    <string name="installed_menu_search_hint">กรอกชื่อแอปพลิเคชันที่ต้องการค้นหา</string>
+    <string name="menu_select_period">เลือกแสดงการใช้งานแอปพลิเคชัน</string>
+    <string name="stats_day">วันนี้</string>
+    <string name="stats_yesterday">เมื่อวาน</string>
+    <string name="stats_week">สัปดาห์</string>
+    <string name="stats_year">เดือน</string>
+    <string name="nav_screen">ตรวจจับเวลาหน้าจอ</string>
+    <string name="nav_eye">ประเมินผลกระทบสุขภาพตา</string>
+    <string name="nav_intro">การดูแลสุขภาพตา</string>
+    <string name="know_id">เกล็ดความรู้การดูแลสุขภาพตา</string>
+    <string name="nav_mor">เพิ่มเติม</string>
+
+    <string name="btn_logout">ออกจากระบบ</string>
+    <string name="installed_include_system">แอปพลิเคชันที่มีอยู่ในระบบ</string>
+    <string name="top_head">5 อันดับสูงสุดในการใช้งานแอปพลิเคชันของสัปดาห์นี้</string>
+
+    <string name="tab_top">การใช้งานสูงสุด</string>
+    <string name="tab_stats">ตรวจจับเวลาหน้าจอ</string>
+    <string name="tab_installed">อนุญาติการตรวจจับ</string>
+
+    <string name="choose_action">เลือกการทำงาน</string>
+    <string name="launch">เปิด</string>
+    <string name="details">รายละเอียด</string>
+    <string name="system_menu">เมนูระบบ</string>
+    <string name="uninstall">ถอนการติดตั้ง</string>
+
+    <string name="top_share_header">5 อันดับแรกของแอปพลิเคชั่นที่ใช้งานมากที่สุด:\n</string>
+    <string name="enable_usage_permission">เปิดใช้สิทธิ์สำหรับ Eye Health แล้วกด back</string>
+    <string name="installed_spinner_sort">เรียงตาม</string>
+    <string name="top_time">เวลาที่ใช้งาน</string>
+    <string name="installed_cannot_be_launched">ไม่สามารถเปิดแอ็พพลิเคชันได้</string>
 
     <string name="hours">h</string>
     <string name="minutes">min</string>
     <string name="seconds">sec</string>
 
-    <string name="installed_menu_search_hint">Type app name</string>
-    <string name="installed_spinner_sort">Sort by</string>
-    <string name="installed_include_system">Include system apps</string>
-    <string name="installed_cannot_be_launched">Application can not be launched</string>
 
-    <string name="choose_action">Choose action</string>
-    <string name="launch">Launch</string>
-    <string name="details">Details</string>
-    <string name="system_menu">System menu</string>
-    <string name="uninstall">Uninstall</string>
+    <string name="nav_noti">ข้อมูลการแจ้งเตือน</string>
 
 </resources>

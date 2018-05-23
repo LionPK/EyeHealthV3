@@ -1,5 +1,6 @@
 <resources>
 
+    <!-- old set color -->
     <color name="toolbar_orange">#F38C41</color>
 
     <color name="blue">#33B5E5</color>
@@ -9,5 +10,24 @@
 
     <color name="list_text">#121212</color>
     <color name="top_border_orange">#FCA24A</color>
+
+    <!-- new set color -->
+    <color name="colorPrimary">#4dd0e1</color>
+    <color name="colorPrimaryDark">#009faf</color>
+    <color name="colorAccent">#88ffff</color>
+    <color name="textColorPrimary">#000000</color>
+    <color name="toolbarIconColor">@color/textColorPrimary</color>
+    <color name="signPageBackgroundColor">#e0f7fa</color>
+    <color name="productGridBackgroundColor">#FFFBFA</color>
+    <color name="colorControlActivated">#00acc1</color>
+    <color name="signUpBackgroundColor">#80deea</color>
+
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorWhiteTransparent">#80ffffff</color>
+    <color name="lbl_name">#333333</color>
+    <color name="btn_logut_bg">#ff6861</color>
+    <color name="gen_black">#000000</color>
+    <color name="gen_white">#FFFFFF</color>
+    <color name="gray">#999999</color>
 
 </resources>
