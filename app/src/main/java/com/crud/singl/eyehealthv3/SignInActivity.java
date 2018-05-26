@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,7 +32,7 @@ import java.util.Map;
  * Email: Praneed.kla@northbkk.ac.th
  * */
 public class SignInActivity extends AppCompatActivity {
-    private static final String TAG = SignUpActivity.class.getSimpleName();
+    private static final String TAG = SignInActivity.class.getSimpleName();
     private Button btnLogin;
     private Button btnLinkToRegister;
     private EditText inputEmail;
@@ -143,7 +144,6 @@ public class SignInActivity extends AppCompatActivity {
 
         // Link to Register Screen
         btnLinkToRegister.setOnClickListener(new View.OnClickListener() {
-
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(),
                         SignUpActivity.class);
@@ -197,7 +197,7 @@ public class SignInActivity extends AppCompatActivity {
 
                         // Launch menu activity
                         Intent intent = new Intent(SignInActivity.this,
-                                MenuActivity.class);
+                                MainActivity.class);
                         startActivity(intent);
                         finish();
                     } else {

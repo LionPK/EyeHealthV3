@@ -14,7 +14,8 @@
     <!-- new set color -->
     <color name="colorPrimary">#4dd0e1</color>
     <color name="colorPrimaryDark">#009faf</color>
-    <color name="colorAccent">#88ffff</color>
+    <!--<color name="colorAccent">#88ffff</color>-->
+    <color name="colorAccent">#4dd0e1</color>
     <color name="textColorPrimary">#000000</color>
     <color name="toolbarIconColor">@color/textColorPrimary</color>
     <color name="signPageBackgroundColor">#e0f7fa</color>
@@ -29,5 +30,6 @@
     <color name="gen_black">#000000</color>
     <color name="gen_white">#FFFFFF</color>
     <color name="gray">#999999</color>
+    <color name="black_gray">#545252</color>
 
 </resources>

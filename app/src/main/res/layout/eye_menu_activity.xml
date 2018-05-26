@@ -35,23 +35,23 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/bottomBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true">
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/bottomBar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true">-->
 
-            <android.support.design.widget.BottomNavigationView
-                android:id="@+id/bottomNavView_Bar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/Widget.eyeHealth.Toolbar"
-                app:itemIconTint="#009faf"
-                app:itemTextColor="#009faf"
-                app:menu="@menu/navigation_menu">
+            <!--<android.support.design.widget.BottomNavigationView-->
+                <!--android:id="@+id/bottomNavView_Bar"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--style="@style/Widget.eyeHealth.Toolbar"-->
+                <!--app:itemIconTint="#009faf"-->
+                <!--app:itemTextColor="#009faf"-->
+                <!--app:menu="@menu/navigation_menu">-->
 
-            </android.support.design.widget.BottomNavigationView>
-        </RelativeLayout>
+            <!--</android.support.design.widget.BottomNavigationView>-->
+        <!--</RelativeLayout>-->
     </RelativeLayout>
 
 </RelativeLayout>

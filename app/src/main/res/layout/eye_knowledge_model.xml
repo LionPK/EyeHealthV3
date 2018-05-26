@@ -5,7 +5,6 @@
     android:layout_height="wrap_content"
     app:cardBackgroundColor="@android:color/transparent"
     app:cardElevation="0dp"
-    app:cardPreventCornerOverlap="true"
     app:contentPaddingTop="10dp"
     app:contentPaddingRight="5dp"
     app:contentPaddingLeft="5dp">
@@ -16,8 +15,10 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="215dp"
-        card_view:cardCornerRadius="5dp"
-        card_view:cardElevation="5dp">
+        android:outlineAmbientShadowColor="@color/gen_black"
+        android:outlineSpotShadowColor="@color/black_gray"
+        card_view:cardCornerRadius="8dp"
+        card_view:cardElevation="0dp">
 
         <LinearLayout
             android:orientation="vertical"

@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.crud.singl.eyehealthv3">
 
-    <!--<application-->
-        <!--android:allowBackup="true"-->
-        <!--android:icon="@mipmap/ic_launcher"-->
-        <!--android:label="@string/app_name"-->
-        <!--android:roundIcon="@mipmap/ic_launcher_round"-->
-        <!--android:supportsRtl="true"-->
-        <!--android:theme="@style/AppTheme"></application>-->
+    <!-- <application -->
+    <!-- android:allowBackup="true" -->
+    <!-- android:icon="@mipmap/ic_launcher" -->
+    <!-- android:label="@string/app_name" -->
+    <!-- android:roundIcon="@mipmap/ic_launcher_round" -->
+    <!-- android:supportsRtl="true" -->
+    <!-- android:theme="@style/AppTheme"></application> -->
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -24,6 +23,29 @@
         tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.UPDATE_APP_OPS_STATS" />
 
+    <!-- <application -->
+    <!-- android:allowBackup="true" -->
+    <!-- android:icon="@mipmap/ic_launcher" -->
+    <!-- android:label="@string/app_name" -->
+    <!-- android:theme="@style/AppTheme" > -->
+    <!-- MainActivity -->
+    <!-- <activity -->
+    <!-- android:name=".MainActivity" -->
+    <!-- android:label="@string/app_name" > -->
+    <!-- <intent-filter> -->
+    <!-- <action android:name="android.intent.action.MAIN" /> -->
+    <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+    <!-- </intent-filter> -->
+    <!-- </activity> -->
+    <!-- <activity android:name=".DetailsActivity" /> -->
+    <!-- <service android:name=".service.UsageService" /> -->
+    <!-- <receiver android:name=".receiver.PhoneBootReceiver" > -->
+    <!-- <intent-filter> -->
+    <!-- <action android:name="android.intent.action.BOOT_COMPLETED" /> -->
+    <!-- </intent-filter> -->
+    <!-- </receiver> -->
+    <!-- <receiver android:name=".receiver.ScreenStatusReceiver" /> -->
+    <!-- </application> -->
     <application
         android:name=".app.AppController"
         android:allowBackup="true"
@@ -39,62 +61,34 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--<activity android:name=".startup.MainActivity" />-->
+        <!-- <activity android:name=".startup.MainActivity" /> -->
         <activity android:name=".SignInActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".GuestUserActivity" />
-        <activity android:name=".introHealth.DetailActivity"></activity>
-
+        <activity android:name=".introHealth.DetailActivity" />
         <activity android:name=".MenuActivity" />
-
         <activity
             android:name=".MainActivity"
             android:label="@string/eye_app_name"
             android:theme="@style/AppTheme.NoActionBar" />
 
-        <!--<receiver android:name=".startup.MenuActivity" />-->
-        <!--<receiver android:name=".startup.UserDetailActivity" />-->
+        <!-- <receiver android:name=".startup.MenuActivity" /> -->
+        <!-- <receiver android:name=".startup.UserDetailActivity" /> -->
 
         <activity android:name=".DetailsActivity" />
 
         <service android:name=".service.UsageService" />
 
-        <receiver android:name=".receiver.PhoneBootReceiver" >
-        <intent-filter>
-        <action android:name="android.intent.action.BOOT_COMPLETED" />
-        </intent-filter>
+        <receiver android:name=".receiver.PhoneBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
         </receiver>
-
         <receiver android:name=".receiver.ScreenStatusReceiver" />
-        <activity android:name=".introHealth.TestActivity"></activity>
+
+        <activity android:name=".introHealth.TestActivity" />
+        <activity android:name=".KnowledgeActivity" />
+        <activity android:name=".introHealth.UserDetailKnowledgeActivity"></activity>
     </application>
-
-    <!--<application-->
-        <!--android:allowBackup="true"-->
-        <!--android:icon="@mipmap/ic_launcher"-->
-        <!--android:label="@string/app_name"-->
-        <!--android:theme="@style/AppTheme" >-->
-        <!--MainActivity-->
-        <!--<activity-->
-            <!--android:name=".MainActivity"-->
-            <!--android:label="@string/app_name" >-->
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        <!--</activity>-->
-
-        <!--<activity android:name=".DetailsActivity" />-->
-
-        <!--<service android:name=".service.UsageService" />-->
-
-        <!--<receiver android:name=".receiver.PhoneBootReceiver" >-->
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.BOOT_COMPLETED" />-->
-            <!--</intent-filter>-->
-        <!--</receiver>-->
-
-        <!--<receiver android:name=".receiver.ScreenStatusReceiver" />-->
-    <!--</application>-->
 
 </manifest>

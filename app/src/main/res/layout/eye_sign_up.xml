@@ -21,7 +21,7 @@
             android:layout_marginTop="48dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="16dp"
-            app:srcCompat="@drawable/sign_up" />
+            app:srcCompat="@drawable/user" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -134,7 +134,7 @@
                     android:layout_height="wrap_content">
 
                     <android.support.design.button.MaterialButton
-                        android:id="@+id/sign_in_button"
+                        android:id="@+id/sign_up_button"
                         style="@style/Widget.eyeHealth.Button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

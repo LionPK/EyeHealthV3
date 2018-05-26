@@ -1,13 +1,16 @@
-package com.crud.singl.eyehealthv3;
+package com.crud.singl.eyehealthv3.guestMenu;
+
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
-import android.support.design.widget.TextInputLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import android.support.design.widget.TextInputLayout;
+import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -16,6 +19,10 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.crud.singl.eyehealthv3.MenuActivity;
+import com.crud.singl.eyehealthv3.R;
+import com.crud.singl.eyehealthv3.SignInActivity;
+import com.crud.singl.eyehealthv3.SignUpActivity;
 import com.crud.singl.eyehealthv3.app.AppConfig;
 import com.crud.singl.eyehealthv3.app.AppController;
 import com.crud.singl.eyehealthv3.helper.SQLiteHandler;
@@ -28,70 +35,92 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Copyright by Mr.Praneed Klanboon
- * Email: Praneed.kla@northbkk.ac.th
- * */
-public class SignUpActivity extends AppCompatActivity {
-    private static final String TAG = SignUpActivity.class.getSimpleName();
+ * A simple {@link Fragment} subclass.
+ */
+public class GuestSignUpFragment extends Fragment {
+    private static final String TAG = GuestSignUpFragment.class.getSimpleName();
     private Button btnRegister;
-    private Button btnCancel;
-    private Button btnLinkToLogin;
     private EditText inputName;
     private EditText inputSurname;
     private EditText inputEmail;
     private EditText inputPassword;
     private EditText inputRePassword;
+    private TextInputLayout nError;
+    private TextInputLayout sError;
+    private TextInputLayout eError;
+    private TextInputLayout pError;
+    private TextInputLayout rError;
     private ProgressDialog pDialog;
     private SessionManager session;
     private SQLiteHandler db;
+    Callback mCallback;
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        try {
+            mCallback = (Callback) context;
+        }catch (ClassCastException e) {
+            throw new ClassCastException(context.toString() + " must implement Callback");
+        }
+    }
+
+
+
+    public GuestSignUpFragment() {
+        // Required empty public constructor
+    }
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.eye_sign_up_activity);
-
-        //Tool bar back menu
-        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar_sign_up);
-        setSupportActionBar(toolbar);
-
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SignUpActivity.this,
-                        SignInActivity.class);
-                startActivity(intent);
-            }
-        });
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.eye_fragment_guest_sign_up, container, false);
+        view.findViewById(R.id.name_edit_text);
+        view.findViewById(R.id.name_text_input);
+        view.findViewById(R.id.surname_edit_text);
+        view.findViewById(R.id.surname_text_input);
+        view.findViewById(R.id.email_edit_text);
+        view.findViewById(R.id.email_text_input);
+        view.findViewById(R.id.password_edit_text);
+        view.findViewById(R.id.password_text_input);
+        view.findViewById(R.id.re_enter_password_edit_text);
+        view.findViewById(R.id.re_enter_password_text_input);
 
         //declare type link to id on view .xml file
-        inputName = (EditText) findViewById(R.id.name_edit_text);
-        inputSurname = (EditText) findViewById(R.id.surname_edit_text);
-        inputEmail = (EditText) findViewById(R.id.email_edit_text);
-        inputPassword = (EditText) findViewById(R.id.password_edit_text);
-        inputRePassword = (EditText) findViewById(R.id.re_enter_password_edit_text);
-        btnRegister = (Button) findViewById(R.id.sign_up_button);
-        btnCancel = (Button) findViewById(R.id.cancel_button);
-        btnLinkToLogin = (Button) findViewById(R.id.link_to_sign_in_button);
+        inputName = (EditText) view.findViewById(R.id.name_edit_text);
+        inputSurname = (EditText) view.findViewById(R.id.surname_edit_text);
+        inputEmail = (EditText) view.findViewById(R.id.email_edit_text);
+        inputPassword = (EditText) view.findViewById(R.id.password_edit_text);
+        inputRePassword = (EditText) view.findViewById(R.id.re_enter_password_edit_text);
+        btnRegister = (Button) view.findViewById(R.id.sign_up_button);
+
+        nError = view.findViewById(R.id.name_text_input);
+        sError = view.findViewById(R.id.surname_text_input);
+        eError = view.findViewById(R.id.email_text_input);
+        pError = view.findViewById(R.id.password_text_input);
+        rError = view.findViewById(R.id.re_enter_password_text_input);
 
         // Progress dialog
-        pDialog = new ProgressDialog(this);
+        pDialog = new ProgressDialog(this.getActivity());
         pDialog.setCancelable(false);
 
         // Session manager
-        session = new SessionManager(getApplicationContext());
+        session = new SessionManager(getContext().getApplicationContext());
 
         // SQLite database handler
-        db = new SQLiteHandler(getApplicationContext());
+        db = new SQLiteHandler(getActivity().getApplicationContext());
 
         // Check if user is already logged in or not
         if (session.isLoggedIn()) {
             // User is already logged in. Take him to Menu activity
-            Intent intent = new Intent(SignUpActivity.this,
+            Intent intent = new Intent(GuestSignUpFragment.this.getActivity(),
                     MenuActivity.class);
             startActivity(intent);
-            finish();
+            getActivity().finish();
         }
+
 
         // Register Button Click event
         btnRegister.setOnClickListener(new View.OnClickListener() {
@@ -101,12 +130,6 @@ public class SignUpActivity extends AppCompatActivity {
                 String email = inputEmail.getText().toString().trim();
                 String password = inputPassword.getText().toString().trim();
                 String rePassword = inputRePassword.getText().toString().trim();
-
-                final TextInputLayout nError = findViewById(R.id.name_text_input);
-                final TextInputLayout sError = findViewById(R.id.surname_text_input);
-                final TextInputLayout eError = findViewById(R.id.email_text_input);
-                final TextInputLayout pError = findViewById(R.id.password_text_input);
-                final TextInputLayout rError = findViewById(R.id.re_enter_password_text_input);
 
                 String emailPattern = "(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"" +
                         "(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])" +
@@ -160,37 +183,10 @@ public class SignUpActivity extends AppCompatActivity {
                 }else if (!name.isEmpty() &&!surname.isEmpty() && (!email.isEmpty() && email.matches(emailPattern)) && (!password.isEmpty() && password.length() >= 8) && (!rePassword.isEmpty() && password.equals(rePassword))) {
                     registerUser(name, surname, email, password);
                 }
-
-//                if (!name.isEmpty() &&!surname.isEmpty() && !email.isEmpty() && !password.isEmpty() && !rePassword.isEmpty()) {
-//                    registerUser(name, surname, email, password);
-//                } else {
-//                    Toast.makeText(getApplicationContext(),
-//                            "กรุณากรอกรายละเอียดของคุณ!", Toast.LENGTH_LONG)
-//                            .show();
-//                }
             }
         });
 
-        //Cancel Sign in
-        btnCancel.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),
-                        SignInActivity.class);
-                startActivity(i);
-                finish();
-            }
-        });
-
-        // Link to Login Screen
-        btnLinkToLogin.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),
-                        SignInActivity.class);
-                startActivity(i);
-                finish();
-            }
-        });
+        return view;
     }
 
     /**
@@ -231,20 +227,20 @@ public class SignUpActivity extends AppCompatActivity {
                         // Inserting row in users table
                         db.addUser(name, surname, email, uid, created_at);
 
-                        Toast.makeText(getApplicationContext(), "ผู้ใช้ลงทะเบียนเรียบร้อยแล้ว ลองเข้าสู่ระบบทันที!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getContext().getApplicationContext(), "ผู้ใช้ลงทะเบียนเรียบร้อยแล้ว ลองเข้าสู่ระบบทันที!", Toast.LENGTH_LONG).show();
 
                         // Launch login activity
                         Intent intent = new Intent(
-                                SignUpActivity.this,
+                                GuestSignUpFragment.this.getActivity(),
                                 SignInActivity.class);
                         startActivity(intent);
-                        finish();
+                        getActivity().finish();
                     } else {
 
                         // Error occurred in registration. Get the error
                         // message
                         String errorMsg = jObj.getString("error_msg");
-                        Toast.makeText(getApplicationContext(),
+                        Toast.makeText(getContext().getApplicationContext(),
                                 errorMsg, Toast.LENGTH_LONG).show();
                     }
                 } catch (JSONException e) {
@@ -257,7 +253,7 @@ public class SignUpActivity extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e(TAG, "Registration Error: " + error.getMessage());
-                Toast.makeText(getApplicationContext(),
+                Toast.makeText(getContext().getApplicationContext(),
                         error.getMessage(), Toast.LENGTH_LONG).show();
                 hideDialog();
             }
@@ -290,4 +286,5 @@ public class SignUpActivity extends AppCompatActivity {
         if (pDialog.isShowing())
             pDialog.dismiss();
     }
+
 }

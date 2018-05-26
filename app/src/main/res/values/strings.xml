@@ -2,43 +2,9 @@
 
     <string name="app_name">My Apps Time</string>
 
-    <!--<string name="tab_top">TOP</string>-->
-    <!--<string name="tab_stats">STATS</string>-->
-    <!--<string name="tab_installed">INSTALLED</string>-->
-
-    <!--<string name="top_menu_share">Share</string>-->
-    <!--<string name="top_head">TOP 3 APPS FOR WEEK</string>-->
-    <!--<string name="top_time">Week time</string>-->
-    <!--<string name="top_share_header">TOP 3 of my most used apps:\n</string>-->
-
-    <!--<string name="menu_select_period">Select period</string>-->
-    <!--<string name="menu_search">Search</string>-->
-
     <string name="stats_select_dates">Select start and end date</string>
-    <!--<string name="stats_day">Today</string>-->
-    <!--<string name="stats_yesterday">Yesterday</string>-->
-    <!--<string name="stats_week">For week</string>-->
-    <!--<string name="stats_year">For year</string>-->
-
-    <!--<string name="enable_usage_permission">Enable permission for My Apps Time and press back</string>-->
-
     <string name="from">from</string>
     <string name="to">to</string>
-
-    <!--<string name="hours">h</string>-->
-    <!--<string name="minutes">min</string>-->
-    <!--<string name="seconds">sec</string>-->
-
-    <!--<string name="installed_menu_search_hint">Type app name</string>-->
-    <!--<string name="installed_spinner_sort">Sort by</string>-->
-    <!--<string name="installed_include_system">Include system apps</string>-->
-    <!--<string name="installed_cannot_be_launched">Application can not be launched</string>-->
-
-    <!--<string name="choose_action">Choose action</string>-->
-    <!--<string name="launch">Launch</string>-->
-    <!--<string name="details">Details</string>-->
-    <!--<string name="system_menu">System menu</string>-->
-    <!--<string name="uninstall">Uninstall</string>-->
 
     <!-- new set string -->
     <string name="eye_app_name">Eye Health</string>
@@ -80,6 +46,8 @@
     <string name="eye_guest_title1">ความรู้เกี่ยวกับโรคตา</string>
     <string name="eye_guest_title2">ความรู้เกี่ยวกับการรับประทานอาหาร</string>
     <string name="eye_sign_knowledge_name">ข้อมูลเกล็ดความรู้</string>
+    <string name="eye_detail_knowledge">เนื้อหาเพิ่มเติม</string>
+    <string name="eye_guest_action">หน้าจอสำหรับผู้ใช้งานทั่วไป</string>
 
 
     <!--Time menu-->
@@ -127,5 +95,11 @@
 
 
     <string name="nav_noti">ข้อมูลการแจ้งเตือน</string>
+    <string name="nav_das">ข้อมูลความรู้</string>
+    <string name="nav_signIn">ลงชื่อเข้าใช้งาน</string>
+    <string name="nav_signUp">ลงทะเบียนผู้ใช้งาน</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

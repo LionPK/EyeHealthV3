@@ -37,7 +37,7 @@ public class MenuActivity extends AppCompatActivity {
         findViewById(R.id.button_new).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(a, GuestUserActivity.class));
+                startActivity(new Intent(a, KnowledgeActivity.class));
             }
         });
     }
