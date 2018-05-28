@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.crud.singl.eyehealthv3.KnowledgeActivity;
 import com.crud.singl.eyehealthv3.MenuActivity;
 import com.crud.singl.eyehealthv3.R;
 
@@ -39,7 +40,7 @@ public class UserDetailKnowledgeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(UserDetailKnowledgeActivity.this,
-                        MenuActivity.class);
+                        KnowledgeActivity.class);
                 startActivity(intent);
             }
         });

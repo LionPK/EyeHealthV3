@@ -32,19 +32,24 @@ public class MainActivity extends AppCompatActivity implements InstalledDialogFr
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.eye_activity_main);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setBackgroundColor(getResources().getColor(R.color.toolbar_orange));
-        toolbar.setLogo(R.mipmap.ic_launcher);
+        toolbar.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+//        toolbar.setLogo(R.mipmap.ic_launcher);
+        toolbar.setTitle(R.string.app_name);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.productGridBackgroundColor));
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayShowTitleEnabled(true);
 
+        // Get the ViewPager and set it's PagerAdapter so that it can display items
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
         viewPager.setAdapter(new MyFragmentPagerAdapter(getSupportFragmentManager(), MainActivity.this));
         viewPager.setOffscreenPageLimit(OFFSCREEN_PAGE_LIMIT);
 
+        // Give the TabLayout the ViewPager **Old method of slide page
         SlidingTabLayout slidingTabLayout = (SlidingTabLayout) findViewById(R.id.sliding_tabs);
+        slidingTabLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         slidingTabLayout.setDistributeEvenly(true);
         slidingTabLayout.setViewPager(viewPager);
 

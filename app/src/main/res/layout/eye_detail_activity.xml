@@ -22,6 +22,7 @@
             android:paddingRight="12dp"
             app:contentInsetStart="0dp"
             app:navigationIcon="@drawable/ic_back"
+            app:titleTextColor="@color/productGridBackgroundColor"
             app:title="@string/eye_detail_knowledge" />
     </android.support.design.widget.AppBarLayout>
 

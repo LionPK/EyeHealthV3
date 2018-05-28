@@ -197,7 +197,7 @@ public class SignInActivity extends AppCompatActivity {
 
                         // Launch menu activity
                         Intent intent = new Intent(SignInActivity.this,
-                                MainActivity.class);
+                                MenuActivity.class);
                         startActivity(intent);
                         finish();
                     } else {

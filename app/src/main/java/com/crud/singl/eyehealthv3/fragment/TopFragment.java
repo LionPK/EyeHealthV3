@@ -33,7 +33,7 @@ import java.util.List;
 public class TopFragment extends Fragment {
 
     private static final String START_URL = "https://play.google.com/store/apps/details?id=";
-    private static final int LIST_SIZE = 3;
+    private static final int LIST_SIZE = 5;
 
     private ListView listView;
     private ProgressBar progressBar;
@@ -63,8 +63,8 @@ public class TopFragment extends Fragment {
         intent.putExtra(Intent.EXTRA_SUBJECT, "Share apps");
         String text = getResources().getString(R.string.top_share_header);
 
-        if (appList != null && appList.size() == 3) {
-            for (int i = 0; i < 3; i++) {
+        if (appList != null && appList.size() == 5) {
+            for (int i = 0; i < 5; i++) {
                 text += appList.get(i).getTitle() + ": " + START_URL + appList.get(i).getPackageName() + "\n";
             }
         }
@@ -131,9 +131,9 @@ public class TopFragment extends Fragment {
 
         @Override
         protected Void doInBackground(Void... params) {
-            appList = loader.loadStatsWithLimit(Period.WEEK, 3);
+            appList = loader.loadStatsWithLimit(Period.WEEK, 5);
 
-            if (appList.size() < 3) {
+            if (appList.size() < 5) {
                 padList(appList);
             }
 

@@ -17,19 +17,20 @@
         android:paddingTop="16dp">
 
         <ImageView
-            android:layout_width="74dp"
-            android:layout_height="74dp"
+            android:layout_width="289dp"
+            android:layout_height="199dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="48dp"
-            android:layout_marginBottom="16dp"
-            app:srcCompat="@drawable/logo" />
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="0dp"
+            app:srcCompat="@drawable/sign_in" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="132dp"
+            android:layout_marginBottom="20dp"
             android:text="@string/eye_app_name"
+            android:textColor="@color/productGridBackgroundColor"
             android:textAppearance="@style/TextAppearance.eyeHealth.Title" />
 
     <android.support.design.card.MaterialCardView

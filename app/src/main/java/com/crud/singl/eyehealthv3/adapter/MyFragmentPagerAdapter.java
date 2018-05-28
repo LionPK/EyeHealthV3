@@ -25,8 +25,8 @@ import java.util.Map;
 public class MyFragmentPagerAdapter extends FragmentPagerAdapter
     implements ViewPager.OnPageChangeListener {
 
-    private static final int FRAGMENT_POSITION_TOP = 0;
-    private static final int FRAGMENT_POSITION_STATS = 1;
+    private static final int FRAGMENT_POSITION_STATS = 0;
+    private static final int FRAGMENT_POSITION_TOP = 1;
     private static final int FRAGMENT_POSITION_INSTALLED = 2;
     private static final int PAGE_COUNT = 3;
 
@@ -38,12 +38,12 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter
         super(fm);
         this.context = context;
 
-        tabTitles.add(context.getResources().getString(R.string.tab_top));
         tabTitles.add(context.getResources().getString(R.string.tab_stats));
+        tabTitles.add(context.getResources().getString(R.string.tab_top));
         tabTitles.add(context.getResources().getString(R.string.tab_installed));
 
-        tabs.put(FRAGMENT_POSITION_TOP, new TopFragment());
         tabs.put(FRAGMENT_POSITION_STATS, new StatsFragment());
+        tabs.put(FRAGMENT_POSITION_TOP, new TopFragment());
         tabs.put(FRAGMENT_POSITION_INSTALLED, new InstalledFragment());
     }
 

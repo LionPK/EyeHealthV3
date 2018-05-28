@@ -24,7 +24,7 @@
                 android:layout_height="167dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="0dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="35dp"
                 app:srcCompat="@drawable/family" />
 
             <TextView

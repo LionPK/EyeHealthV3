@@ -12,7 +12,7 @@
 
         <include
             android:id="@+id/include"
-            layout="@layout/content_main_knowledge" />
+            layout="@layout/eye_content_main_knowledge" />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/knowledge_fab"

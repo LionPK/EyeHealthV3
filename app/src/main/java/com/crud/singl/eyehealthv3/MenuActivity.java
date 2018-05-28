@@ -18,10 +18,6 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.eye_menu_activity);
 
-        // Set toolbar
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().hide();
 
         //set this activity to a
         final Activity a = MenuActivity.this;

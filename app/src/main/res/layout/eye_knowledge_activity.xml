@@ -30,7 +30,8 @@
                     android:paddingRight="12dp"
                     app:contentInsetStart="0dp"
                     app:title="@string/eye_guest_action"
-                    app:titleTextColor="@color/gen_black"/>
+                    app:titleTextColor="@color/productGridBackgroundColor"
+                    android:textStyle="bold|italic"/>
             </android.support.design.widget.AppBarLayout>
 
             <FrameLayout
@@ -40,7 +41,7 @@
 
             <!--<include-->
             <!--android:id="@+id/include"-->
-            <!--layout="@layout/content_main_knowledge" />-->
+            <!--layout="@layout/eye_content_main_knowledge" />-->
 
             <!--<android.support.design.widget.FloatingActionButton-->
             <!--android:id="@+id/knowledge_fab"-->

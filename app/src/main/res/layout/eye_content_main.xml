@@ -6,28 +6,31 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     android:gravity="center"
+    android:padding="15dp"
+    android:scrollbars="none"
     tools:context=".MenuActivity"
     tools:showIn="@layout/eye_menu_activity">
 
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
         android:orientation="vertical"
         android:padding="0dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="20dp"
             android:gravity="center"
             android:text="EYE HEALTH MENU"
+            android:textStyle="bold"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="30sp" />
+            android:textSize="40sp" />
 
         <GridLayout
-            android:layout_width="377dp"
+            android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
             android:columnCount="1">
@@ -49,8 +52,8 @@
         </GridLayout>
 
         <GridLayout
-            android:layout_width="377dp"
-            android:layout_height="147dp"
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
             android:layout_gravity="center_horizontal"
             android:columnCount="2">
 
@@ -89,7 +92,7 @@
         </GridLayout>
 
         <GridLayout
-            android:layout_width="377dp"
+            android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
             android:columnCount="1">

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".introHealth.ImpactActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:text="ข้อมูลการวิเคราะห์สุขภาพตา"
+            android:textColor="@color/colorPrimaryDark"
+            android:textAppearance="@style/TextAppearance.eyeHealth.Title" />
+
+        <ImageView
+            android:id="@+id/im_picture"
+            android:layout_width="203dp"
+            android:layout_height="153dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/border_top"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="0dp"
+            app:srcCompat="@drawable/feel_level_one" />
+
+        //Display impact
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:columnCount="5">
+
+            <LinearLayout android:layout_width="50dp">
+
+                <TextView
+                    android:id="@+id/textTitle"
+                    android:layout_width="42dp"
+                    android:layout_height="wrap_content"
+                    android:text="วันที่"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout>
+
+                <TextView
+                    android:id="@+id/im_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="date"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/textTitle_impact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="ข้อมูลผลกระทบ"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/impact_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="ผลจากการคำนวน" />
+
+        //Display intro
+        <TextView
+             android:id="@+id/textTileIntro"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="20dp"
+             android:text="ข้อมูลแนวทางการดูแลสุขภาพ"
+             android:textSize="18dp"
+             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/intro_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="ผลการแนะนำ" />
+
+    </LinearLayout>
+</ScrollView>

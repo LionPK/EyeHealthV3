@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.support.v4.app.Fragment;
+import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -18,6 +19,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -25,6 +28,7 @@ import android.widget.Toast;
 
 import com.crud.singl.eyehealthv3.R;
 import com.crud.singl.eyehealthv3.adapter.StatsListAdapter;
+import com.crud.singl.eyehealthv3.introHealth.ImpactActivity;
 import com.crud.singl.eyehealthv3.loader.DBStatProvider;
 import com.crud.singl.eyehealthv3.loader.NativeStatProvider;
 import com.crud.singl.eyehealthv3.loader.StatProvider;
@@ -48,8 +52,20 @@ public class StatsFragment extends Fragment {
 
     private TextView tvPeriod;
     private ListView listView;
+    private TextView hour_time;
+    private TextView minute_time;
+    public  TextView cur_time;
+    private Button calculat_impact;
     private List<StatEntry> statList;
     private ProgressBar progressBar;
+
+    private int[] im_picture = {
+            R.drawable.feel_level_one,
+            R.drawable.feel_level_two,
+            R.drawable.feel_level_three,
+            R.drawable.feel_level_four
+
+    };
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
@@ -114,6 +130,258 @@ public class StatsFragment extends Fragment {
         setTextMark(period);
 
         listView = (ListView) getView().findViewById(R.id.stats_list);
+        hour_time = (TextView) getView().findViewById(R.id.hour_time);
+        minute_time = (TextView) getView().findViewById(R.id.minute_time);
+
+        //display cur time
+        String mydate = (DateFormat.format("dd-MM-yyyy hh:mm:ss", new java.util.Date()).toString());
+        cur_time = (TextView) getView().findViewById(R.id.cur_time);
+        cur_time.setText("ใช้งานล่าสุด " + mydate);
+
+
+        calculat_impact = (Button) getView().findViewById(R.id.calculate_impact);
+
+        calculat_impact.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                int hour = Integer.parseInt(hour_time.getText().toString());
+                int minute = Integer.parseInt(minute_time.getText().toString());
+                String mydate = (DateFormat.format("dd-MM-yyyy hh:mm:ss", new java.util.Date()).toString());
+
+                if (hour < 1 && minute < 30) {
+                    Log.d("TAGE", "จากการวิเคราะห์พบว่าคุณยังไม่มีอาการทางสายตาที่เกิดขึ้นระหว่างการเล่นสมาร์ทโฟน");
+                    Log.d("TAGE","" +mydate);
+                    Log.d("TAGE",""+im_picture[0]);
+
+
+                    final String EMImpact = "จากการวิเคราะห์พบว่าคุณยังไม่มีอาการทางสายตาที่เกิดขึ้นระหว่างการเล่นสมาร์ทโฟน";
+                    final String Date = mydate;
+                    Intent intent = new Intent(StatsFragment.this.getActivity(), ImpactActivity.class);
+                    intent.putExtra("Message", EMImpact);
+                    intent.putExtra("Date", mydate);
+                    intent.putExtra("Picture",im_picture[0]);
+                    startActivity(intent);
+
+                } else if (hour < 1 && (minute >= 30 && minute < 60)) {
+                    Log.d("TAGE", "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา ตาพร่า หรือการมองเห็นภาพซ้อน");
+                    Log.d("TAGE","" +mydate);
+                    Log.d("TAGE",""+im_picture[1]);
+
+                    final String EMImpact = "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา ตาพร่า หรือการมองเห็นภาพซ้อน";
+                    Intent intent = new Intent(StatsFragment.this.getActivity(), ImpactActivity.class);
+                    intent.putExtra("Message", EMImpact);
+                    intent.putExtra("Date", mydate);
+                    intent.putExtra("Picture",im_picture[1]);
+                    startActivity(intent);
+
+                } else if ((hour >= 1 && minute < 30) && (hour < 2)) {
+                    Log.d("TAGE", "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา ตาพร่า หรือการเคืองตา");
+                    Log.d("TAGE","" +mydate);
+                    Log.d("TAGE",""+im_picture[1]);
+
+                    final String EMImpact = "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา ตาพร่า หรือการเคืองตา";
+                    Intent intent = new Intent(StatsFragment.this.getActivity(), ImpactActivity.class);
+                    intent.putExtra("Message", EMImpact);
+                    intent.putExtra("Date", mydate);
+                    intent.putExtra("Picture",im_picture[1]);
+                    startActivity(intent);
+
+                } else if ((hour >= 1 && (minute >= 30 && minute < 60)) && (hour < 2)) {
+                    Log.d("TAGE", "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา ตาพร่า หรือการเคืองตา");
+                    Log.d("TAGE","" +mydate);
+                    Log.d("TAGE",""+im_picture[1]);
+
+                    final String EMImpact = "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา ตาพร่า หรือการเคืองตา";
+                    final String Date = mydate;
+                    Intent intent = new Intent(StatsFragment.this.getActivity(), ImpactActivity.class);
+                    intent.putExtra("Message", EMImpact);
+                    intent.putExtra("Date", mydate);
+                    intent.putExtra("Picture",im_picture[1]);
+                    startActivity(intent);
+
+                } else if ((hour >= 2 && minute < 30) && (hour < 3)) {
+                    Log.d("TAGE", "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา ตาพร่า หรือการเคืองตา");
+                    Log.d("TAGE","" +mydate);
+                    Log.d("TAGE",""+im_picture[1]);
+
+                    final String EMImpact = "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา ตาพร่า หรือการเคืองตา";
+                    Intent intent = new Intent(StatsFragment.this.getActivity(), ImpactActivity.class);
+                    intent.putExtra("Message", EMImpact);
+                    intent.putExtra("Date", mydate);
+                    intent.putExtra("Picture",im_picture[1]);
+                    startActivity(intent);
+
+                } else if ((hour >= 2 && (minute >= 30 && minute < 60)) && (hour < 3)) {
+                    Log.d("TAGE", "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา ตาพร่า หรือการเคืองตา");
+                    Log.d("TAGE","" +mydate);
+                    Log.d("TAGE",""+im_picture[1]);
+
+                    final String EMImpact = "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา ตาพร่า หรือการเคืองตา";
+                    Intent intent = new Intent(StatsFragment.this.getActivity(), ImpactActivity.class);
+                    intent.putExtra("Message", EMImpact);
+                    intent.putExtra("Date", mydate);
+                    intent.putExtra("Picture",im_picture[1]);
+                    startActivity(intent);
+
+                } else if ((hour >= 3 && minute < 30) && (hour < 4)) {
+                    Log.d("TAGE", "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา เคืองตา หรืออาการน้ำตาไหล");
+                    Log.d("TAGE","" +mydate);
+                    Log.d("TAGE",""+im_picture[1]);
+
+                    final String EMImpact = "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา เคืองตา หรืออาการน้ำตาไหล";
+                    Intent intent = new Intent(StatsFragment.this.getActivity(), ImpactActivity.class);
+                    intent.putExtra("Message", EMImpact);
+                    intent.putExtra("Date", mydate);
+                    intent.putExtra("Picture",im_picture[1]);
+                    startActivity(intent);
+
+                } else if ((hour >= 3 && (minute >= 30 && minute < 60)) && (hour < 4)) {
+                    Log.d("TAGE", "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา เคืองตา หรืออาการน้ำตาไหล");
+                    Log.d("TAGE","" +mydate);
+                    Log.d("TAGE",""+im_picture[1]);
+
+                    final String EMImpact = "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา เคืองตา หรืออาการน้ำตาไหล";
+                    Intent intent = new Intent(StatsFragment.this.getActivity(), ImpactActivity.class);
+                    intent.putExtra("Message", EMImpact);
+                    intent.putExtra("Date", mydate);
+                    intent.putExtra("Picture",im_picture[1]);
+                    startActivity(intent);
+
+                } else if ((hour >= 4 && minute < 30) && (hour < 5)) {
+                    Log.d("TAGE", "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา เคืองตา หรือการมองเห็นภาพซ้อน");
+                    Log.d("TAGE","" +mydate);
+                    Log.d("TAGE",""+im_picture[2]);
+
+                    final String EMImpact = "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา เคืองตา หรือการมองเห็นภาพซ้อน";
+                    Intent intent = new Intent(StatsFragment.this.getActivity(), ImpactActivity.class);
+                    intent.putExtra("Message", EMImpact);
+                    intent.putExtra("Date", mydate);
+                    intent.putExtra("Picture",im_picture[2]);
+                    startActivity(intent);
+
+                } else if ((hour >= 4 && (minute >= 30 && minute < 60)) && (hour < 5)) {
+                    Log.d("TAGE", "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา เคืองตา หรืออาการน้ำตาไหล");
+                    Log.d("TAGE","" +mydate);
+                    Log.d("TAGE",""+im_picture[2]);
+
+                    final String EMImpact = "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา เคืองตา หรืออาการน้ำตาไหล";
+                    Intent intent = new Intent(StatsFragment.this.getActivity(), ImpactActivity.class);
+                    intent.putExtra("Message", EMImpact);
+                    intent.putExtra("Date", mydate);
+                    intent.putExtra("Picture",im_picture[2]);
+                    startActivity(intent);
+
+                } else if ((hour >= 5 && minute < 30) && (hour < 6)) {
+                    Log.d("TAGE", "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา เคืองตา หรืออาการน้ำตาไหล");
+                    Log.d("TAGE","" +mydate);
+                    Log.d("TAGE",""+im_picture[2]);
+
+                    final String EMImpact = "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา เคืองตา หรืออาการน้ำตาไหล";
+                    Intent intent = new Intent(StatsFragment.this.getActivity(), ImpactActivity.class);
+                    intent.putExtra("Message", EMImpact);
+                    intent.putExtra("Date", mydate);
+                    intent.putExtra("Picture",im_picture[2]);
+                    startActivity(intent);
+
+                } else if ((hour >= 5 && (minute >= 30 && minute < 60)) && (hour < 6)) {
+                    Log.d("TAGE", "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที  ุณอาจจะมีอาการปวดกระบอกตา เคืองตา หรืออาการน้ำตาไหล");
+                    Log.d("TAGE","" +mydate);
+                    Log.d("TAGE",""+im_picture[2]);
+
+                    final String EMImpact = "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา เคืองตา หรืออาการน้ำตาไหล";
+                    Intent intent = new Intent(StatsFragment.this.getActivity(), ImpactActivity.class);
+                    intent.putExtra("Message", EMImpact);
+                    intent.putExtra("Date", mydate);
+                    intent.putExtra("Picture",im_picture[2]);
+                    startActivity(intent);
+
+                } else if ((hour >= 6 && minute < 30) && (hour < 7)) {
+                    Log.d("TAGE", "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา 6 " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา เคืองตา หรืออาการน้ำตาไหล");
+                    Log.d("TAGE","" +mydate);
+                    Log.d("TAGE",""+im_picture[2]);
+
+                    final String EMImpact = "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา เคืองตา หรืออาการน้ำตาไหล";
+                    Intent intent = new Intent(StatsFragment.this.getActivity(), ImpactActivity.class);
+                    intent.putExtra("Message", EMImpact);
+                    intent.putExtra("Date", mydate);
+                    intent.putExtra("Picture",im_picture[2]);
+                    startActivity(intent);
+
+                } else if ((hour >= 6 && (minute >= 30 && minute < 60)) && (hour < 7)) {
+                    Log.d("TAGE", "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา ตาพร่า หรืออาการน้ำตาไหล");
+                    Log.d("TAGE","" +mydate);
+                    Log.d("TAGE",""+im_picture[2]);
+
+                    final String EMImpact = "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา ตาพร่า หรืออาการน้ำตาไหล";
+                    Intent intent = new Intent(StatsFragment.this.getActivity(), ImpactActivity.class);
+                    intent.putExtra("Message", EMImpact);
+                    intent.putExtra("Date", mydate);
+                    intent.putExtra("Picture",im_picture[2]);
+                    startActivity(intent);
+
+                } else if ((hour >= 7 && minute < 30) && (hour < 8)) {
+                    Log.d("TAGE", "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา เคืองตา หรืออาการน้ำตาไหล");
+                    Log.d("TAGE","" +mydate);
+                    Log.d("TAGE",""+im_picture[2]);
+
+                    final String EMImpact = "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา เคืองตา หรืออาการน้ำตาไหล";
+                    Intent intent = new Intent(StatsFragment.this.getActivity(), ImpactActivity.class);
+                    intent.putExtra("Message", EMImpact);
+                    intent.putExtra("Date", mydate);
+                    intent.putExtra("Picture",im_picture[2]);
+                    startActivity(intent);
+
+                } else if ((hour >= 7 && (minute >= 30 && minute < 60)) && (hour < 8)) {
+                    Log.d("TAGE", "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา เคืองตา หรืออาการน้ำตาไหล");
+                    Log.d("TAGE","" +mydate);
+                    Log.d("TAGE",""+im_picture[2]);
+
+                    final String EMImpact = "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา เคืองตา หรืออาการน้ำตาไหล";
+                    Intent intent = new Intent(StatsFragment.this.getActivity(), ImpactActivity.class);
+                    intent.putExtra("Message", EMImpact);
+                    intent.putExtra("Date", mydate);
+                    intent.putExtra("Picture",im_picture[2]);
+                    startActivity(intent);
+
+                } else if ((hour >= 8 && minute < 30) && (hour < 9)) {
+                    Log.d("TAGE", "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา เคืองตา หรืออาการน้ำตาไหล");
+                    Log.d("TAGE","" +mydate);
+                    Log.d("TAGE",""+im_picture[2]);
+
+                    final String EMImpact = "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา เคืองตา หรืออาการน้ำตาไหล";
+                    Intent intent = new Intent(StatsFragment.this.getActivity(), ImpactActivity.class);
+                    intent.putExtra("Message", EMImpact);
+                    intent.putExtra("Date", mydate);
+                    intent.putExtra("Picture",im_picture[2]);
+                    startActivity(intent);
+
+                } else if ((hour > 8 && minute > 30) && hour < 9) {
+                    Log.d("TAGE", "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา เคืองตา หรือการมองเห็นภาพซ้อน");
+                    Log.d("TAGE","" +mydate);
+                    Log.d("TAGE",""+im_picture[2]);
+
+                    final String EMImpact = "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที คุณอาจจะมีอาการปวดกระบอกตา เคืองตา หรือการมองเห็นภาพซ้อน";
+                    Intent intent = new Intent(StatsFragment.this.getActivity(), ImpactActivity.class);
+                    intent.putExtra("Message", EMImpact);
+                    intent.putExtra("Date", mydate);
+                    intent.putExtra("Picture",im_picture[2]);
+                    startActivity(intent);
+
+                } else if (hour > 9) {
+                    Log.d("TAGE", "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที สุขภาพสายตาของคุณมีความเสียงเป็นอย่างมาก ควรพักสายทุกครั้งหลังจากเป็นงานสมาร์ทโฟนติดต่อกันเป็นเวลา 30 นาที");
+                    Log.d("TAGE","" +mydate);
+                    Log.d("TAGE",""+im_picture[3]);
+
+                    final String EMImpact = "จากการใช้งานสมาร์ทโฟนเป็นระยะเวลา " + hour + " ชั่วโมง " + minute + " นาที สุขภาพสายตาของคุณมีความเสียงเป็นอย่างมาก ควรพักสายทุกครั้งหลังจากเป็นงานสมาร์ทโฟนติดต่อกันเป็นเวลา 30 นาที";
+                    Intent intent = new Intent(StatsFragment.this.getActivity(), ImpactActivity.class);
+                    intent.putExtra("Message", EMImpact);
+                    intent.putExtra("Date", mydate);
+                    intent.putExtra("Picture",im_picture[3]);
+                    startActivity(intent);
+                }
+            }
+        });
     }
 
     @Override
@@ -209,7 +477,7 @@ public class StatsFragment extends Fragment {
         context.startActivity(intent);
     }
 
-    private class LoadStatsTask extends AsyncTask<Period, Void, Void> {
+    private class LoadStatsTask extends AsyncTask<Period, Void, List<StatEntry>> {
 
         StatsListAdapter adapter;
         Period period;
@@ -221,12 +489,12 @@ public class StatsFragment extends Fragment {
             progressBar.setVisibility(View.VISIBLE);
         }
 
-        protected Void doInBackground(Period... params) {
+        //ตรงนี้จะไม่สามารถกำหนดค่าไปยัง textView ได้ เพราะมันยังทำงานอยู่ด้านหลัง จะเอาออกได้ต้องไปทำที่ onPostExecute
+        protected List<StatEntry> doInBackground(Period... params) {
             period = params[0];
             statList = loader.loadStats(period);
-
             adapter = new StatsListAdapter(context, statList);
-            return null;
+            return statList;
         }
 
         @Override
@@ -235,8 +503,31 @@ public class StatsFragment extends Fragment {
         }
 
         @Override
-        protected void onPostExecute(Void result) {
+        protected void onPostExecute(List<StatEntry> result) {
             super.onPostExecute(result);
+
+            //calculate total time for display screen
+            int timeAll = 0;
+            try {
+                for (int i = 0; i < result.size(); i++) {
+                    timeAll += result.get(i).getTime();
+
+                }
+                Log.e("TAG", "Total time :  " + timeAll);
+
+                int hour = (timeAll / 3600);
+                int minute = (timeAll / 60) - (hour * 60);
+                Log.e("TAG", "Time : " + hour);
+                Log.e("TAG", "Minute : " + minute);
+
+                hour_time.setText("" + hour);
+                minute_time.setText("" + minute);
+
+            } catch (Exception e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
             progressBar.setVisibility(View.GONE);
             listView.setAdapter(adapter);
             setTextMark(period);

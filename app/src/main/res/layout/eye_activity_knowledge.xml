@@ -23,10 +23,12 @@
             android:paddingRight="12dp"
             app:contentInsetStart="0dp"
             app:navigationIcon="@drawable/ic_back"
-            app:title="@string/eye_sign_knowledge_name" />
+            app:title="@string/eye_sign_knowledge_name"
+            android:textSize="30sp"
+            app:titleTextColor="@color/productGridBackgroundColor"/>
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main_knowledge" />
+    <include layout="@layout/eye_content_main_knowledge" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/knowledge_fab"

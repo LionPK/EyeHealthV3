@@ -1,35 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/stats_tv_period"
-        android:layout_width="wrap_content"
+    <android.support.design.card.MaterialCardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:textStyle="bold"
-        android:textColor="@color/blue"
-        android:text="Period"
-        android:textSize="16sp" />
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/signPageBackgroundColor"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/stats_tv_period"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:text="Period"
+                android:textColor="@color/blue"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/cur_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="time" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:columnCount="5">
+
+                <LinearLayout android:layout_width="200dp">
+
+                    <TextView
+                        android:id="@+id/text1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="เวลารวมใช้งานแอปพลิเคชัน"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="30dp">
+
+                    <TextView
+                        android:id="@+id/hour_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="h"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="35dp">
+
+                    <TextView
+                        android:id="@+id/hour"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="h"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="30dp">
+
+                    <TextView
+                        android:id="@+id/minute_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="m"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                <LinearLayout>
+
+                    <TextView
+                        android:id="@+id/minute"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="min"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </GridLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:columnCount="2">
+
+                    <LinearLayout android:layout_width="210dp">
+
+                        <TextView
+                            android:id="@+id/text2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:text="ผลกระทบสุขภาพตา"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout>
+
+                        <android.support.design.button.MaterialButton
+                            android:id="@+id/calculate_impact"
+                            style="@style/Widget.eyeHealth.Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="วิเคราะห์"
+                            android:textSize="18dp" />
+                    </LinearLayout>
+
+                </GridLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </android.support.design.card.MaterialCardView>
 
     <ListView
         android:id="@+id/stats_list"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/stats_tv_period"
+        android:layout_below="@id/card_view"
         tools:listitem="@layout/row_stats" />
 
     <ProgressBar
         android:id="@+id/stats_progress_bar"
-        style="@android:style/Widget.ProgressBar.Large"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="162dp"
+        android:layout_height="103dp"
         android:layout_centerInParent="true" />
 
 </RelativeLayout>

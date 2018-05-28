@@ -83,7 +83,7 @@
     </style>
 
     <style name="HomeItemLayoutStyle">
-        <item name="android:layout_width">184dp</item>
+        <item name="android:layout_width">185dp</item>
         <item name="android:layout_height">140dp</item>
         <item name="android:layout_margin">2dp</item>
         <item name="android:orientation">vertical</item>
@@ -121,16 +121,17 @@
     </style>
 
     <!-- them ทั่วไปของ app -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- กำหนด them เองตรงนี้. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+        <!--&lt;!&ndash; กำหนด them เองตรงนี้. &ndash;&gt;-->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+    <!--</style>-->
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
+    <!--<style name="AppTheme.NoActionBar">-->
+        <!--<item name="windowActionBar">false</item>-->
+        <!--<item name="windowNoTitle">true</item>-->
+    <!--</style>-->
+
 
 </resources>
