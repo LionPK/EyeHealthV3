@@ -31,6 +31,13 @@ public class SettingsActivity extends AppCompatActivity {
         });
 
         // when click on button round to page that user want
+        findViewById(R.id.menu_one).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SettingsActivity.this, MemberProfileActivity.class));
+            }
+        });
+
         findViewById(R.id.menu_two).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -15,15 +15,15 @@
         tools:ignore="ProtectedPermissions" />
 
     <!-- <uses-permission android:name="android.permission.UPDATE_APP_OPS_STATS" /> -->
+    <!--android:hardwareAccelerated="false"-->
+    <!--android:supportsRtl="true"-->
     <application
         android:name=".app.AppController"
         android:allowBackup="true"
-        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/eye_app_name"
         android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
         android:theme="@style/Theme.eyeHealth">
         <activity android:name=".SplashFragment">
             <intent-filter>
