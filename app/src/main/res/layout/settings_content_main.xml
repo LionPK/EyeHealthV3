@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/menu_one"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="65dp"
+        android:src="@drawable/menu_one" />
+
+    <ImageView
+        android:id="@+id/menu_two"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:layout_below="@+id/menu_one"
+        android:layout_gravity="center"
+        android:src="@drawable/menu_two" />
+
+    <ImageView
+        android:id="@+id/menu_three"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/menu_two"
+        android:layout_gravity="center"
+        android:src="@drawable/menu_three" />
+
+    <ImageView
+        android:id="@+id/menu_four"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/menu_three"
+        android:layout_gravity="center"
+        android:src="@drawable/menu_four" />
+
+    <ImageView
+        android:id="@+id/menu_five"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/menu_four"
+        android:layout_gravity="center"
+        android:src="@drawable/menu_five" />
+
+    <ImageView
+        android:id="@+id/menu_six"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/menu_five"
+        android:layout_gravity="center"
+        android:src="@drawable/menu_six" />
+
+</RelativeLayout>

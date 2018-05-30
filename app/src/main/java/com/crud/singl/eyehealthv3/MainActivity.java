@@ -7,10 +7,14 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.crud.singl.eyehealthv3.adapter.MyFragmentPagerAdapter;
@@ -58,7 +62,48 @@ public class MainActivity extends AppCompatActivity implements InstalledDialogFr
             ComponentName component = new ComponentName(this, PhoneBootReceiver.class);
             getPackageManager().setComponentEnabledSetting(component, PackageManager.COMPONENT_ENABLED_STATE_DISABLED , PackageManager.DONT_KILL_APP);
         }
+
+        // set bottom navigation view
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation_member);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        //set point of bottom bar selected
+        Menu menu = navigation.getMenu();
+        MenuItem menuItem = menu.getItem(1);
+        menuItem.setChecked(true);
     }
+
+    //set bottom bar when click action
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()) {
+                case R.id.screen_menu:
+                    Intent intent = new Intent(MainActivity.this, MenuActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.screen_id:
+
+                    break;
+                case R.id.intro_id:
+                    Intent intent2 = new Intent(MainActivity.this, KnowledgeActivity.class);
+                    startActivity(intent2);
+                    break;
+                case R.id.eye_id:
+//                    getSupportFragmentManager().beginTransaction()
+//                            .replace(R.id.guestContentContainer, new GuestSignInFragment())
+//                            .commit();
+                    break;
+                case R.id.mor_id:
+                    Intent intent4 = new Intent(MainActivity.this, SettingsActivity.class);
+                    startActivity(intent4);
+                    break;
+            }
+            return false;
+        }
+    };
 
     @Override
     protected void onStart() {

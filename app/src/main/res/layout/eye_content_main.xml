@@ -1,119 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="#FFFFFF"
     android:gravity="center"
-    android:padding="15dp"
+    android:padding="2dp"
     android:scrollbars="none"
     tools:context=".MenuActivity"
     tools:showIn="@layout/eye_menu_activity">
 
-    <GridLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:orientation="vertical"
-        android:padding="0dp">
+        android:layout_height="wrap_content">
 
-        <TextView
+        <RelativeLayout
+            android:id="@+id/title1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="EYE HEALTH MENU"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="20dp"
-            android:gravity="center"
-            android:text="EYE HEALTH MENU"
-            android:textStyle="bold"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="40sp" />
+            android:layout_below="@+id/title1">
 
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_gravity="center_horizontal"
-            android:columnCount="1">
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/button_screen"
-                style="@style/HomeItemLayoutStyle1"
-                android:background="@drawable/shape_home_item_1">
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:columnCount="1">
 
-                <ImageView
-                    style="@style/HomeItemImageStyle"
-                    android:src="@drawable/screen_time_pic" />
+                    <LinearLayout
+                        android:id="@+id/button_screen"
+                        style="@style/HomeItemLayoutStyle1"
+                        android:layout_width="325dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_home_item_1">
 
-                <TextView
-                    style="@style/HomeItemLabelStyle"
-                    android:textStyle="bold"
-                    android:text="@string/nav_screen" />
-            </LinearLayout>
-        </GridLayout>
+                        <ImageView
+                            style="@style/HomeItemImageStyle"
+                            android:src="@drawable/screen_time_pic" />
 
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="145dp"
-            android:layout_gravity="center_horizontal"
-            android:columnCount="2">
+                        <TextView
+                            style="@style/HomeItemLabelStyle"
+                            android:text="@string/nav_screen"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </GridLayout>
 
-            <LinearLayout
-                android:id="@+id/button_new"
-                style="@style/HomeItemLayoutStyle"
-                android:background="@drawable/shape_home_item_3">
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:columnCount="2">
 
-                <ImageView
-                    style="@style/HomeItemImageStyle"
-                    android:src="@drawable/intro_pic" />
+                    <LinearLayout
+                        android:id="@+id/button_new"
+                        style="@style/HomeItemLayoutStyle"
+                        android:layout_width="162dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_home_item_3">
 
-                <TextView
-                    style="@style/HomeItemLabelStyle"
-                    android:textStyle="bold"
-                    android:text="@string/know_id" />
-            </LinearLayout>
+                        <ImageView
+                            style="@style/HomeItemImageStyle"
+                            android:layout_height="70dp"
+                            android:src="@drawable/intro_pic" />
 
-            <LinearLayout
-                android:id="@+id/button_notification"
-                style="@style/HomeItemLayoutStyle"
-                android:background="@drawable/shape_home_item_4">
+                        <TextView
+                            style="@style/HomeItemLabelStyle"
+                            android:text="@string/know_id"
+                            android:textStyle="bold" />
+                    </LinearLayout>
 
-                <ImageView
-                    style="@style/HomeItemImageStyle"
-                    android:layout_width="131dp"
-                    android:layout_height="82dp"
-                    android:src="@drawable/ic_message" />
+                    <LinearLayout
+                        android:id="@+id/button_notification"
+                        style="@style/HomeItemLayoutStyle"
+                        android:layout_width="162dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_home_item_4">
 
-                <TextView
-                    style="@style/HomeItemLabelStyle"
-                    android:textStyle="bold"
-                    android:text="@string/nav_noti" />
-            </LinearLayout>
+                        <ImageView
+                            style="@style/HomeItemImageStyle"
+                            android:layout_width="93dp"
+                            android:layout_height="92dp"
+                            android:src="@drawable/ic_message" />
 
-        </GridLayout>
+                        <TextView
+                            style="@style/HomeItemLabelStyle"
+                            android:text="@string/nav_noti"
+                            android:textStyle="bold" />
+                    </LinearLayout>
 
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_gravity="center_horizontal"
-            android:columnCount="1">
+                </GridLayout>
 
-            <LinearLayout
-                android:id="@+id/button_management"
-                style="@style/HomeItemLayoutStyle1"
-                android:background="@drawable/shape_home_item_2">
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:columnCount="1">
 
-                <ImageView
-                    style="@style/HomeItemImageStyle"
-                    android:layout_width="151dp"
-                    android:layout_height="107dp"
-                    android:src="@drawable/eye_pic" />
+                    <LinearLayout
+                        android:id="@+id/button_management"
+                        style="@style/HomeItemLayoutStyle1"
+                        android:layout_width="325dp"
+                        android:background="@drawable/shape_home_item_2"
+                        android:layout_row="0"
+                        android:layout_column="0">
 
-                <TextView
-                    style="@style/HomeItemLabelStyle"
-                    android:textStyle="bold"
-                    android:text="@string/nav_eye" />
-            </LinearLayout>
-        </GridLayout>
+                        <ImageView
+                            style="@style/HomeItemImageStyle"
+                            android:layout_width="151dp"
+                            android:layout_height="107dp"
+                            android:src="@drawable/eye_pic" />
 
-    </GridLayout>
-</ScrollView>
+                        <TextView
+                            style="@style/HomeItemLabelStyle"
+                            android:text="@string/nav_eye"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </GridLayout>
+
+            </GridLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

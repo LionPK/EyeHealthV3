@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/top_header"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginLeft="7dp"
-        android:layout_marginRight="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:text="@string/top_head"
-        android:textColor="@color/blue"
-        android:textSize="16sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="14sp"
         android:textStyle="bold" />
 
     <ListView
@@ -28,11 +28,12 @@
         android:layout_marginRight="10dp"
         android:divider="@android:color/transparent"
         android:dividerHeight="4dp"
+        android:layout_marginBottom="58dp"
         tools:listitem="@layout/row_top" />
 
     <ProgressBar
         android:id="@+id/top_progress_bar"
+        android:layout_centerInParent="true"
         android:layout_width="162dp"
-        android:layout_height="103dp"
-        android:layout_centerInParent="true" />
+        android:layout_height="103dp" />
 </RelativeLayout>

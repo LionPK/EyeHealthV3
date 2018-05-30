@@ -6,9 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
 
 import com.crud.singl.eyehealthv3.guestMenu.Callback;
 import com.crud.singl.eyehealthv3.guestMenu.GuestKnowledgeFragment;
@@ -26,7 +24,7 @@ public class GuestUserActivity extends AppCompatActivity implements Callback {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.eye_knowledge_activity);
+        setContentView(R.layout.eye_knowledge_guest_activity);
 
         if(savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()

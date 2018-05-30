@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:versionCode="1"
-    android:versionName="1.0"
     package="com.crud.singl.eyehealthv3">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -15,13 +13,15 @@
     <uses-permission
         android:name="android.permission.PACKAGE_USAGE_STATS"
         tools:ignore="ProtectedPermissions" />
-    <!--<uses-permission android:name="android.permission.UPDATE_APP_OPS_STATS" />-->
 
+    <!-- <uses-permission android:name="android.permission.UPDATE_APP_OPS_STATS" /> -->
     <application
         android:name=".app.AppController"
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/eye_app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.eyeHealth">
@@ -39,7 +39,6 @@
         <activity android:name=".introHealth.DetailActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".MainActivity" />
-
         <activity android:name=".DetailsActivity" />
 
         <service android:name=".service.UsageService" />
@@ -53,7 +52,9 @@
 
         <activity android:name=".introHealth.ImpactActivity" />
         <activity android:name=".KnowledgeActivity" />
-        <activity android:name=".introHealth.UserDetailKnowledgeActivity"></activity>
+        <activity android:name=".introHealth.UserDetailKnowledgeActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".MemberProfileActivity"></activity>
     </application>
 
 </manifest>

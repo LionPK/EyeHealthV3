@@ -7,7 +7,7 @@
     <string name="to">to</string>
 
     <!-- new set string -->
-    <string name="eye_app_name">Eye Health</string>
+    <string name="eye_app_name">Eye-Health</string>
 
     <!--text for sign in page-->
     <string name="eye_hint_email">อีเมล์</string>
@@ -64,6 +64,7 @@
     <string name="stats_week">สัปดาห์</string>
     <string name="stats_year">เดือน</string>
     <string name="nav_screen">ตรวจจับเวลาหน้าจอ</string>
+    <string name="nav_menu">เมนู</string>
     <string name="nav_eye">ประเมินผลกระทบสุขภาพตา</string>
     <string name="nav_intro">การดูแลสุขภาพตา</string>
     <string name="know_id">เกล็ดความรู้การดูแลสุขภาพตา</string>
@@ -101,5 +102,9 @@
 
     <!-- impact-->
     <string name="eye_sign_impact">ประเมินผลกระทบ</string>
+    <string name="eye_setting">การจัดการเพิ่มเติม</string>
+
+    <!--more menu-->
+    <string name="eye_profile_menu">โปรไฟล์</string>
 
 </resources>
