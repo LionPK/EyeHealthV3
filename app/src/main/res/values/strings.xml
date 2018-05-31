@@ -107,4 +107,25 @@
     <!--more menu-->
     <string name="eye_profile_menu">โปรไฟล์</string>
 
+    <!--preferenceScreen-->
+    <string name="pref_title_notifications">จัดการการแจ้งเเตือน</string>
+    <string name="notifications_new_message">notifications_new_message</string>
+    <string name="title_new_notification_sound">การแจ้งเตือนข้อความใหม่</string>
+    <string name="key_notifications_new_message_ringtone">key_notifications_new_message_ringtone</string>
+    <string name="summary_choose_ringtone">กรุณาเลือกเสียงการแจ้งเตือน</string>
+    <string name="pref_title_ringtone">เสียงแจ้งเตือน</string>
+    <string name="pref_ringtone_silent">ไม่ใช้เสียง</string>
+    <string name="key_vibrate">key_vibrate</string>
+    <string name="summary_vibrate">แจ้งเตือนข้อความใหม่ด้วยการสั่น</string>
+    <string name="title_vibrate">การสั่น</string>
+    <string name="pref_header_about">เกี่ยวกับ</string>
+    <string name="summary_about">แอปพลิเคชัน Eye-Health ได้ถูกพัฒนาขึ้นโดยนายปราณีต กลั่นบุญ และนายสรายุตร พูลผล โดยมีอาจารย์ปิติพัฒน์ เจิมบุญธนะพงศ์ เป็นที่ปรึกษางานวิจัยนี้</string>
+    <string name="app_version">1.1.1</string>
+    <string name="summary_support">มีข้อสงสัยหรือไม่? เรายินดีที่จะช่วยเหลือ!</string>
+    <string name="title_send_feedback">ส่งความคิดเห็น</string>
+    <string name="title_version">เวอร์ชัน</string>
+    <string name="key_send_feedback">key_send_feedback</string>
+    <string name="choose_email_client">Choose email client</string>
+    <string name="title_activity_settings">Settings</string>
+
 </resources>

@@ -9,12 +9,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.volley.toolbox.ImageLoader;
+import com.crud.singl.eyehealthv3.KnowledgeActivity;
 import com.crud.singl.eyehealthv3.MainActivity;
 import com.crud.singl.eyehealthv3.R;
+
+import org.w3c.dom.Text;
 
 
 /**
@@ -22,6 +26,8 @@ import com.crud.singl.eyehealthv3.R;
  * Email: Praneed.kla@northbkk.ac.th
  * */
 public class ImpactActivity extends AppCompatActivity {
+
+    private Button btnReadMore;
 
     private int[] im_pic = {
             R.drawable.feel_level_one,
@@ -35,6 +41,17 @@ public class ImpactActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.eye_activity_impact);
+
+        btnReadMore = (Button) findViewById(R.id.read_more_button);
+        // Link to Register Screen
+        btnReadMore.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),
+                        KnowledgeActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
         // Tool bar back menu
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar_impact);
@@ -52,12 +69,16 @@ public class ImpactActivity extends AppCompatActivity {
         String im_data = bundle.getString("Message");
         String im_date = bundle.getString("Date");
         Integer pic = bundle.getInt("Picture");
+        String introHealth = bundle.getString("intorHealth");
 
         TextView impact_data = (TextView)findViewById(R.id.impact_data);
         impact_data.setText(im_data);
 
         TextView date = (TextView)findViewById(R.id.im_date);
         date.setText(im_date);
+
+        TextView intro = (TextView)findViewById(R.id.intro_data);
+        intro.setText(introHealth);
 
         //check pic for display on view
         if (pic == im_pic[0]) {

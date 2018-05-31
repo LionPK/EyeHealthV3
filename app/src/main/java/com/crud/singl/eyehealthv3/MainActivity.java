@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements InstalledDialogFr
 //                            .commit();
                     break;
                 case R.id.mor_id:
-                    Intent intent4 = new Intent(MainActivity.this, SettingsActivity.class);
+                    Intent intent4 = new Intent(MainActivity.this, MoresActivity.class);
                     startActivity(intent4);
                     break;
             }

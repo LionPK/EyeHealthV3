@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,20 +11,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/app_bar_sign_up"
-            style="@style/Widget.eyeHealth.Toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="12dp"
-            android:paddingLeft="12dp"
-            android:paddingEnd="12dp"
-            app:contentInsetStart="0dp"
-            app:navigationIcon="@drawable/ic_back"
-            app:title="@string/eye_setting"
-            app:titleTextColor="@color/productGridBackgroundColor"/>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/app_bar_sign_up"
+        style="@style/Widget.eyeHealth.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="12dp"
+        android:paddingLeft="12dp"
+        android:paddingEnd="12dp"
+        app:contentInsetStart="0dp"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="โปรไฟล์ผู้ใช้งาน"
+        app:titleTextColor="@color/productGridBackgroundColor"/>
     </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/member_profile_content"/>
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

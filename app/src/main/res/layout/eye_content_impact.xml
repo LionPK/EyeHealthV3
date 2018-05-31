@@ -73,12 +73,30 @@
             android:textSize="18dp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/impact_data"
+    <android.support.design.card.MaterialCardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view_impact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="8dp">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18dp"
-            android:text="ผลจากการคำนวน" />
+            android:orientation="vertical"
+            android:background="@color/signPageBackgroundColor"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/impact_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="ผลจากการคำนวน" />
+        </LinearLayout>
+    </android.support.design.card.MaterialCardView>
 
         //Display intro
         <TextView
@@ -90,12 +108,47 @@
              android:textSize="18dp"
              android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/intro_data"
+        <android.support.design.card.MaterialCardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view_intro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18dp"
-            android:text="ผลการแนะนำ" />
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="45dp"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/signPageBackgroundColor"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/intro_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:text="ผลการแนะนำ" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.button.MaterialButton
+                        android:id="@+id/read_more_button"
+                        style="@style/Widget.eyeHealth.Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:text="อ่านเพิ่มเติม" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </android.support.design.card.MaterialCardView>
 
     </LinearLayout>
 </ScrollView>

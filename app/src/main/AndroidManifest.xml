@@ -15,8 +15,8 @@
         tools:ignore="ProtectedPermissions" />
 
     <!-- <uses-permission android:name="android.permission.UPDATE_APP_OPS_STATS" /> -->
-    <!--android:hardwareAccelerated="false"-->
-    <!--android:supportsRtl="true"-->
+    <!-- android:hardwareAccelerated="false" -->
+    <!-- android:supportsRtl="true" -->
     <application
         android:name=".app.AppController"
         android:allowBackup="true"
@@ -53,8 +53,9 @@
         <activity android:name=".introHealth.ImpactActivity" />
         <activity android:name=".KnowledgeActivity" />
         <activity android:name=".introHealth.UserDetailKnowledgeActivity" />
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".MemberProfileActivity"></activity>
+        <activity android:name=".MoresActivity"/>
+        <activity android:name=".MemberProfileActivity" />
+        <activity android:name=".SettingsActivity"></activity>
     </application>
 
 </manifest>

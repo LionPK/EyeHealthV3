@@ -19,7 +19,7 @@
             <android.support.design.widget.AppBarLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
+                <!--app:navigationIcon="@drawable/ic_back"-->
                 <android.support.v7.widget.Toolbar
                     android:id="@+id/app_bar_view_knowledge"
                     style="@style/Widget.eyeHealth.Toolbar"
@@ -30,7 +30,6 @@
                     android:paddingEnd="12dp"
                     android:paddingRight="12dp"
                     app:contentInsetStart="0dp"
-                    app:navigationIcon="@drawable/ic_back"
                     app:title="@string/eye_sign_knowledge_name"
                     android:textSize="30sp"
                     app:titleTextColor="@color/productGridBackgroundColor"/>

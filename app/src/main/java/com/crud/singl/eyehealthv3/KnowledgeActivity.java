@@ -13,7 +13,6 @@ import android.view.View;
 import android.widget.GridView;
 
 import com.crud.singl.eyehealthv3.json.JSONDownloaderMEM;
-import com.crud.singl.eyehealthv3.json.JSONDownloaderOne;
 
 public class KnowledgeActivity extends AppCompatActivity {
 
@@ -26,17 +25,17 @@ public class KnowledgeActivity extends AppCompatActivity {
         setContentView(R.layout.eye_activity_knowledge);
 
         //Tool bar back menu
-        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar_view_knowledge);
-        setSupportActionBar(toolbar);
-
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                android.content.Intent intent = new android.content.Intent(KnowledgeActivity.this,
-                        MenuActivity.class);
-                startActivity(intent);
-            }
-        });
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar_view_knowledge);
+//        setSupportActionBar(toolbar);
+//
+//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                android.content.Intent intent = new android.content.Intent(KnowledgeActivity.this,
+//                        MenuActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
 
         // Set grid action
@@ -86,7 +85,7 @@ public class KnowledgeActivity extends AppCompatActivity {
 //                            .commit();
                     break;
                 case R.id.mor_id:
-                    Intent intent4 = new Intent(KnowledgeActivity.this, SettingsActivity.class);
+                    Intent intent4 = new Intent(KnowledgeActivity.this, MoresActivity.class);
                     startActivity(intent4);
                     break;
             }

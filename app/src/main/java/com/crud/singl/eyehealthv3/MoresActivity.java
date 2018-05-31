@@ -1,43 +1,62 @@
 package com.crud.singl.eyehealthv3;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-
-/**
- * @Copyright by Mr.Praneed Klanboon
- * Email: Praneed.kla@northbkk.ac.th
- * */
-public class MenuActivity extends AppCompatActivity {
+public class MoresActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.eye_menu_activity);
+        setContentView(R.layout.eye_activity_mores);
 
-
-        //set this activity to a
-        final Activity a = MenuActivity.this;
+        //Tool bar back menu
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar_sign_up);
+//        setSupportActionBar(toolbar);
+//
+//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MoresActivity.this,
+//                        MenuActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
         // when click on button round to page that user want
-        findViewById(R.id.button_screen).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.menu_one).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(a, MainActivity.class));
+                startActivity(new Intent(MoresActivity.this, MemberProfileActivity.class));
             }
         });
 
-        findViewById(R.id.button_new).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.menu_two).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(a, KnowledgeActivity.class));
+                startActivity(new Intent(MoresActivity.this, MainActivity.class));
+            }
+        });
+
+        findViewById(R.id.menu_three).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MoresActivity.this, KnowledgeActivity.class));
+            }
+        });
+
+        findViewById(R.id.menu_six).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MoresActivity.this, SettingsActivity.class));
+
             }
         });
 
@@ -48,9 +67,8 @@ public class MenuActivity extends AppCompatActivity {
 
         //set point of bottom bar selected
         Menu menu = navigation.getMenu();
-        MenuItem menuItem = menu.getItem(0);
+        MenuItem menuItem = menu.getItem(4);
         menuItem.setChecked(true);
-
     }
 
     //set bottom bar when click action
@@ -61,14 +79,15 @@ public class MenuActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.screen_menu:
-
+                    Intent intent = new Intent(MoresActivity.this, MenuActivity.class);
+                    startActivity(intent);
                     break;
                 case R.id.screen_id:
-                    Intent intent1 = new Intent(MenuActivity.this, MainActivity.class);
+                    Intent intent1 = new Intent(MoresActivity.this, MainActivity.class);
                     startActivity(intent1);
                     break;
                 case R.id.intro_id:
-                    Intent intent2 = new Intent(MenuActivity.this, KnowledgeActivity.class);
+                    Intent intent2 = new Intent(MoresActivity.this, KnowledgeActivity.class);
                     startActivity(intent2);
                     break;
                 case R.id.eye_id:
@@ -77,40 +96,36 @@ public class MenuActivity extends AppCompatActivity {
 //                            .commit();
                     break;
                 case R.id.mor_id:
-                    Intent intent4 = new Intent(MenuActivity.this, MoresActivity.class);
-                    startActivity(intent4);
+
                     break;
             }
             return false;
         }
     };
-
+//
 //    @Override
 //    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
 //        getMenuInflater().inflate(R.menu.menu_main, menu);
 //        return true;
 //    }
 //
 //    @Override
 //    public boolean onOptionsItemSelected(MenuItem item) {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
 //        int id = item.getItemId();
 //
-//        //noinspection SimplifiableIfStatement
-//        if(id == R.id.action_settings) {
+//        if (id == R.id.action_settings) {
+//            // launch settings activity
+//            startActivity(new Intent(MoresActivity.this, SettingsActivity.class));
+//            return true;
+//        }
+
+//        if (id == R.id.action_settings_headers) {
+//            // launch settings activity
+//            startActivity(new Intent(MoresActivity.this, SettingsHeadersActivity.class));
 //            return true;
 //        }
 //
 //        return super.onOptionsItemSelected(item);
 //    }
-
-    @Override
-    public void onBackPressed() {
-        finishAffinity();
-        System.exit(0);
-    }
 
 }
