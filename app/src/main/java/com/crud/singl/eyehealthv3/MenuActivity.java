@@ -71,11 +71,11 @@ public class MenuActivity extends AppCompatActivity {
                     Intent intent2 = new Intent(MenuActivity.this, KnowledgeActivity.class);
                     startActivity(intent2);
                     break;
-                case R.id.eye_id:
+//                case R.id.eye_id:
 //                    getSupportFragmentManager().beginTransaction()
 //                            .replace(R.id.guestContentContainer, new GuestSignInFragment())
 //                            .commit();
-                    break;
+//                    break;
                 case R.id.mor_id:
                     Intent intent4 = new Intent(MenuActivity.this, MoresActivity.class);
                     startActivity(intent4);

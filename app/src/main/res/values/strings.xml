@@ -120,7 +120,7 @@
     <string name="title_vibrate">การสั่น</string>
     <string name="pref_header_about">เกี่ยวกับ</string>
     <string name="summary_about">แอปพลิเคชัน Eye-Health ได้ถูกพัฒนาขึ้นโดยนายปราณีต กลั่นบุญ และนายสรายุตร พูลผล โดยมีอาจารย์ปิติพัฒน์ เจิมบุญธนะพงศ์ เป็นที่ปรึกษางานวิจัยนี้</string>
-    <string name="app_version">1.1.1</string>
+    <string name="app_version">1.2.2</string>
     <string name="summary_support">มีข้อสงสัยหรือไม่? เรายินดีที่จะช่วยเหลือ!</string>
     <string name="title_send_feedback">ส่งความคิดเห็น</string>
     <string name="title_version">เวอร์ชัน</string>

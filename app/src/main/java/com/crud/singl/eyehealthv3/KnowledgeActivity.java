@@ -79,11 +79,11 @@ public class KnowledgeActivity extends AppCompatActivity {
                 case R.id.intro_id:
 
                     break;
-                case R.id.eye_id:
+//                case R.id.eye_id:
 //                    getSupportFragmentManager().beginTransaction()
 //                            .replace(R.id.guestContentContainer, new GuestSignInFragment())
 //                            .commit();
-                    break;
+//                    break;
                 case R.id.mor_id:
                     Intent intent4 = new Intent(KnowledgeActivity.this, MoresActivity.class);
                     startActivity(intent4);

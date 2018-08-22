@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "796817076600",
+    "firebase_url": "https://eye-health-1c5ff.firebaseio.com",
+    "project_id": "eye-health-1c5ff",
+    "storage_bucket": "eye-health-1c5ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:796817076600:android:2b50e0a2e5316102",
+        "android_client_info": {
+          "package_name": "com.crud.singl.eyehealthv3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "796817076600-rhmcfihqt44m6h28n310rsn34smjg5n6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.crud.singl.eyehealthv3",
+            "certificate_hash": "61d7ec2e91679684df3be2a8afa0ef784c211a1f"
+          }
+        },
+        {
+          "client_id": "796817076600-9uj66medk0rggvoo9lff6pnjpn7k28ah.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "796817076600-9uj66medk0rggvoo9lff6pnjpn7k28ah.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPP3A01htsxLCAjye7gHjF-9PJHcIzBIg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "796817076600-9uj66medk0rggvoo9lff6pnjpn7k28ah.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

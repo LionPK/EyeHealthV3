@@ -38,14 +38,14 @@
         <!--app:showAsAction="ifRoom">-->
     <!--</item>-->
 
-    <item
-        android:id="@+id/eye_id"
-        android:icon="@drawable/ic_eye"
-        android:title="@string/nav_eye"
-        android:tooltipText="bold"
-        android:enabled="true"
-        app:showAsAction="ifRoom">
-    </item>
+    <!--<item-->
+        <!--android:id="@+id/eye_id"-->
+        <!--android:icon="@drawable/ic_eye"-->
+        <!--android:title="@string/nav_eye"-->
+        <!--android:tooltipText="bold"-->
+        <!--android:enabled="true"-->
+        <!--app:showAsAction="ifRoom">-->
+    <!--</item>-->
 
 
     <item

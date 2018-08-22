@@ -67,7 +67,7 @@ public class MoresActivity extends AppCompatActivity {
 
         //set point of bottom bar selected
         Menu menu = navigation.getMenu();
-        MenuItem menuItem = menu.getItem(4);
+        MenuItem menuItem = menu.getItem(3);
         menuItem.setChecked(true);
     }
 
@@ -90,11 +90,11 @@ public class MoresActivity extends AppCompatActivity {
                     Intent intent2 = new Intent(MoresActivity.this, KnowledgeActivity.class);
                     startActivity(intent2);
                     break;
-                case R.id.eye_id:
+//                case R.id.eye_id:
 //                    getSupportFragmentManager().beginTransaction()
 //                            .replace(R.id.guestContentContainer, new GuestSignInFragment())
 //                            .commit();
-                    break;
+//                    break;
                 case R.id.mor_id:
 
                     break;
